@@ -24,5 +24,9 @@ jobs:
       run: npm install
     - name: Build
       run: npm run build
-    - name: Deploy
-      run: npm run deploy
+    - name: Deploy to gh-pages branch
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist
+        branch: gh-pages
+        clean: true
