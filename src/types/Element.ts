@@ -1,6 +1,7 @@
 export interface ElementImage {
   title: string;
   url: string;
+  local_url?: string;
   attribution: string;
 }
 
@@ -35,9 +36,12 @@ export interface Element {
   ypos: number;
   cpk_hex: string | null;
   spectral_img: string | null;
+  local_spectral_img?: string;
   image: ElementImage | null;
   bohr_model_image: string | null;
+  local_bohr_model_image?: string;
   bohr_model_3d: string | null;
+  local_bohr_model_3d?: string;
   oxidation_states: string;
   group_name: string | null;
 }

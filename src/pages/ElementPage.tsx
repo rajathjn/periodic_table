@@ -1,9 +1,9 @@
 import React, { Suspense, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getElementBySymbol, getAdjacentElements, CATEGORY_COLORS, CATEGORY_LABELS, getElementImagePath } from '../utils/elementUtils';
+import { getElementBySymbol, getAdjacentElements, CATEGORY_COLORS, CATEGORY_LABELS } from '../utils/elementUtils';
 import PropertiesTable from '../components/PropertiesTable';
 
-const BohrModel3D = React.lazy(() => import('../components/BohrModel3D'));
+const GLBViewer = React.lazy(() => import('../components/GLBViewer'));
 
 const ElementPage: React.FC = () => {
   const { symbol } = useParams<{ symbol: string }>();
@@ -36,8 +36,7 @@ const ElementPage: React.FC = () => {
     document.title = `${element.name} (${element.symbol}) — Periodic Table`;
   }, [element]);
 
-  // Build local image path
-  const localImagePath = element.image?.url ? getElementImagePath(element.symbol, element.image.url) : null;
+  // Used for fallbacks in image loading
 
   return (
     <div className="element-page">
@@ -76,7 +75,13 @@ const ElementPage: React.FC = () => {
               Loading 3D Model...
             </div>
           }>
-            <BohrModel3D shells={element.shells} atomicNumber={element.number} atomicMass={element.atomic_mass} />
+            {element.local_bohr_model_3d || element.bohr_model_3d ? (
+              <GLBViewer url={element.local_bohr_model_3d || element.bohr_model_3d!} />
+            ) : (
+              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
+                No 3D Model Available
+              </div>
+            )}
           </Suspense>
         </div>
       </div>
@@ -158,25 +163,56 @@ const ElementPage: React.FC = () => {
         </section>
       )}
 
-      {/* Element Image */}
-      {localImagePath && element.image && (
-        <section className="element-section element-image-section animate-fadeInUp" style={{ animationDelay: '0.25s' }}>
-          <h2><span className="section-icon">📷</span> Image</h2>
-          <img
-            src={localImagePath}
-            alt={element.image.title || `${element.name} sample`}
-            loading="lazy"
-            onError={(e) => {
-              // Fallback to remote URL if local image not found
-              (e.target as HTMLImageElement).src = element.image!.url;
-            }}
-          />
-          {element.image.title && (
-            <p style={{ fontWeight: 500, marginBottom: 4 }}>{element.image.title}</p>
+      {/* Image Gallery */}
+      <section className="element-section element-image-section animate-fadeInUp" style={{ animationDelay: '0.25s' }}>
+        <h2><span className="section-icon">📷</span> Image Gallery</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {element.image && (element.image.local_url || element.image.url) && (
+            <div>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Sample Image</h3>
+              <img
+                src={element.image.local_url || element.image.url}
+                alt={element.image.title || `${element.name} sample`}
+                loading="lazy"
+                onError={(e) => { (e.target as HTMLImageElement).src = element.image!.url; }}
+                style={{ width: '100%', maxWidth: '600px', borderRadius: 'var(--radius-lg)' }}
+              />
+              {element.image.title && (
+                <p style={{ fontWeight: 500, marginTop: 8, marginBottom: 4 }}>{element.image.title}</p>
+              )}
+              <p className="image-attribution">{element.image.attribution}</p>
+            </div>
           )}
-          <p className="image-attribution">{element.image.attribution}</p>
-        </section>
-      )}
+
+          {(element.local_spectral_img || element.spectral_img) && (
+            <div>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Spectral Image</h3>
+              <img
+                src={element.local_spectral_img || element.spectral_img!}
+                alt={`${element.name} spectrum`}
+                loading="lazy"
+                onError={(e) => { (e.target as HTMLImageElement).src = element.spectral_img!; }}
+                style={{ width: '100%', maxWidth: '600px', borderRadius: 'var(--radius-lg)' }}
+              />
+            </div>
+          )}
+
+          {(element.local_bohr_model_image || element.bohr_model_image) && (
+            <div>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Bohr Model (2D)</h3>
+              <div style={{ background: '#ffffff', display: 'inline-block', padding: '1.5rem', borderRadius: 'var(--radius-lg)' }}>
+                <img
+                  src={element.local_bohr_model_image || element.bohr_model_image!}
+                  alt={`${element.name} 2D Bohr model`}
+                  loading="lazy"
+                  onError={(e) => { (e.target as HTMLImageElement).src = element.bohr_model_image!; }}
+                  style={{ width: '100%', maxWidth: '300px', mixBlendMode: 'multiply' }}
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
 
       {/* Navigation */}
       <nav className="element-nav" aria-label="Element navigation">
