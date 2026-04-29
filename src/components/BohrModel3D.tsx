@@ -31,8 +31,10 @@ function Nucleus({ protons, neutrons }: { protons: number; neutrons: number }) {
     : 0.03;
 
   // Nucleus radius scales with cube root of total
+  // Make packing much tighter for small elements (<= 10)
+  const packFactor = total <= 10 ? 0.5 : 1.15; 
   const nucleusRadius = total <= 1 ? 0
-    : particleRadius * Math.pow(total, 1 / 3) * 1.3;
+    : particleRadius * Math.pow(total, 1 / 3) * packFactor;
 
   // Slowly rotate the nucleus
   useFrame((_, delta) => {
@@ -48,24 +50,23 @@ function Nucleus({ protons, neutrons }: { protons: number; neutrons: number }) {
     const goldenRatio = (1 + Math.sqrt(5)) / 2;
     const dummy = new THREE.Object3D();
 
-    // Build alternating proton/neutron assignment
-    let pRem = protons;
-    let nRem = neutrons;
+    // Create a randomly shuffled array of protons (true) and neutrons (false)
+    const particleTypes = new Array(total).fill(false);
+    for (let i = 0; i < protons; i++) {
+      particleTypes[i] = true;
+    }
+    
+    // Fisher-Yates shuffle
+    for (let i = total - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [particleTypes[i], particleTypes[j]] = [particleTypes[j], particleTypes[i]];
+    }
+
     let pIdx = 0;
     let nIdx = 0;
 
     for (let i = 0; i < total; i++) {
-      // Alternating pattern: proton, neutron, proton, neutron...
-      // When one type runs out, fill the rest with the other
-      let isProton: boolean;
-      if (pRem > 0 && nRem > 0) {
-        isProton = i % 2 === 0;
-        if (isProton) pRem--; else nRem--;
-      } else if (pRem > 0) {
-        isProton = true; pRem--;
-      } else {
-        isProton = false; nRem--;
-      }
+      const isProton = particleTypes[i];
 
       // Position: single particle at center, otherwise volume-fill a sphere
       if (total === 1) {
@@ -74,10 +75,18 @@ function Nucleus({ protons, neutrons }: { protons: number; neutrons: number }) {
         const r = nucleusRadius * Math.pow((i + 0.5) / total, 1 / 3);
         const theta = Math.acos(1 - 2 * (i + 0.5) / total);
         const phi = (2 * Math.PI * i) / goldenRatio;
+        
+        // Add random jitter to make it look organically packed
+        // Use more jitter relative to the smaller radius for light elements
+        const jitter = particleRadius * (total <= 10 ? 0.6 : 0.25); 
+        const jx = (Math.random() - 0.5) * jitter;
+        const jy = (Math.random() - 0.5) * jitter;
+        const jz = (Math.random() - 0.5) * jitter;
+
         dummy.position.set(
-          r * Math.sin(theta) * Math.cos(phi),
-          r * Math.sin(theta) * Math.sin(phi),
-          r * Math.cos(theta)
+          r * Math.sin(theta) * Math.cos(phi) + jx,
+          r * Math.sin(theta) * Math.sin(phi) + jy,
+          r * Math.cos(theta) + jz
         );
       }
       dummy.updateMatrix();
@@ -91,7 +100,7 @@ function Nucleus({ protons, neutrons }: { protons: number; neutrons: number }) {
 
     if (protonRef.current) protonRef.current.instanceMatrix.needsUpdate = true;
     if (neutronRef.current) neutronRef.current.instanceMatrix.needsUpdate = true;
-  }, [protons, neutrons, total, nucleusRadius]);
+  }, [protons, neutrons, total, nucleusRadius, particleRadius]);
 
   return (
     <group ref={groupRef}>
@@ -204,7 +213,10 @@ function AtomScene({ shells, atomicNumber, atomicMass }: {
   const neutrons = Math.max(0, Math.round(atomicMass) - atomicNumber);
 
   const shellData = useMemo(() => {
-    return shells.map((electronCount, i) => {
+    // Always draw 7 shells (standard for periodic table elements)
+    const allShells = Array.from({ length: 7 }, (_, i) => shells[i] || 0);
+    
+    return allShells.map((electronCount, i) => {
       const radius = 1.2 + i * 0.8;
       const tiltX = ((i * 137.508 * Math.PI) / 180) % Math.PI;
       const tiltZ = ((i * 73.0 + 30) * Math.PI) / 180;
@@ -236,7 +248,8 @@ function AtomScene({ shells, atomicNumber, atomicMass }: {
 }
 
 const BohrModel3D: React.FC<BohrModel3DProps> = ({ shells, atomicNumber, atomicMass }) => {
-  const outerRadius = 1.2 + (shells.length - 1) * 0.8;
+  // Always account for 7 shells when setting camera distance
+  const outerRadius = 1.2 + (7 - 1) * 0.8;
   const cameraZ = outerRadius * 2.8 + 1.5;
 
   return (
