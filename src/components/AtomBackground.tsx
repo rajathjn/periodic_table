@@ -45,7 +45,7 @@ const AtomBackground: React.FC = () => {
             animationDelay: `${pos.delay}s`,
           }}
         >
-          <AtomSVG size={pos.size} color="#818cf8" />
+          <AtomSVG size={pos.size} color="#006060" />
         </div>
       ))}
     </div>

@@ -13,17 +13,11 @@ const Header: React.FC = () => {
     <header className="site-header">
       <div className="header-inner">
         <Link to="/" className="header-logo">
-          <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
-            <defs>
-              <linearGradient id="logo-g" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#6366f1" />
-                <stop offset="100%" stopColor="#a855f7" />
-              </linearGradient>
-            </defs>
-            <circle cx="32" cy="32" r="6" fill="url(#logo-g)" />
-            <ellipse cx="32" cy="32" rx="26" ry="9" fill="none" stroke="#6366f1" strokeWidth="1.5" opacity="0.7" />
-            <ellipse cx="32" cy="32" rx="26" ry="9" fill="none" stroke="#a855f7" strokeWidth="1.5" opacity="0.7" transform="rotate(60 32 32)" />
-            <ellipse cx="32" cy="32" rx="26" ry="9" fill="none" stroke="#818cf8" strokeWidth="1.5" opacity="0.7" transform="rotate(120 32 32)" />
+          <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="6" fill="#ffffff" />
+            <ellipse cx="32" cy="32" rx="26" ry="9" fill="none" stroke="#ffffff" strokeWidth="2" opacity="0.8" />
+            <ellipse cx="32" cy="32" rx="26" ry="9" fill="none" stroke="#ffffff" strokeWidth="2" opacity="0.8" transform="rotate(60 32 32)" />
+            <ellipse cx="32" cy="32" rx="26" ry="9" fill="none" stroke="#ffffff" strokeWidth="2" opacity="0.8" transform="rotate(120 32 32)" />
           </svg>
           <span className="header-logo-text">Periodic Table</span>
         </Link>

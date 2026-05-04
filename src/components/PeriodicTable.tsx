@@ -56,10 +56,10 @@ const PeriodicTable: React.FC = () => {
       </div>
 
       {/* Lanthanide & Actinide rows */}
-      <div style={{ maxWidth: 1300, margin: '16px auto 0', padding: '0 16px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginBottom: 4, marginTop: 16 }}>
+      <div style={{ maxWidth: 1300, margin: '8px auto 0', padding: '0 16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginBottom: 4, marginTop: 8 }}>
           <span className="la-ac-label" style={{ width: 62, flexShrink: 0 }}>La</span>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(15, minmax(52px, 1fr))', gap: 3, flex: 1 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(15, minmax(52px, 1fr))', gap: 2, flex: 1 }}>
             {lanthanides.map(el => (
               <ElementCell
                 key={el.number}
@@ -93,30 +93,28 @@ const PeriodicTable: React.FC = () => {
             bottom: 20,
             left: '50%',
             transform: 'translateX(-50%)',
-            background: 'rgba(26, 26, 62, 0.95)',
-            backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(255,255,255,0.1)',
-            borderRadius: 12,
-            padding: '12px 24px',
+            background: '#ffffe1',
+            border: '1px solid #000000',
+            borderRadius: 0,
+            padding: '8px 16px',
             display: 'flex',
             alignItems: 'center',
-            gap: 16,
+            gap: 12,
             zIndex: 50,
-            animation: 'fadeIn 0.15s ease',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
+            boxShadow: '2px 2px 0 #808080',
           }}
         >
           <span style={{
             fontFamily: 'var(--font-heading)',
-            fontSize: '2rem',
-            fontWeight: 800,
-            color: 'var(--text-accent)',
+            fontSize: '1.8rem',
+            fontWeight: 700,
+            color: 'var(--accent-primary)',
           }}>
             {hoveredElement.symbol}
           </span>
           <div>
-            <div style={{ fontWeight: 600, fontSize: '0.95rem' }}>{hoveredElement.name}</div>
-            <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>
+            <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#000000' }}>{hoveredElement.name}</div>
+            <div style={{ color: '#404040', fontSize: '0.8rem' }}>
               #{hoveredElement.number} · {hoveredElement.atomic_mass.toFixed(3)} u · {hoveredElement.phase} · {hoveredElement.category}
             </div>
           </div>

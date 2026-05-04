@@ -49,9 +49,9 @@ const ElementPage: React.FC = () => {
           <span
             className="category-badge"
             style={{
-              background: `${categoryColor}22`,
+              background: '#d4d0c8',
               color: categoryColor,
-              border: `1px solid ${categoryColor}44`,
+              border: 'none',
             }}
           >
             {categoryLabel}
@@ -60,7 +60,7 @@ const ElementPage: React.FC = () => {
             {element.atomic_mass.toFixed(4)} u
           </div>
           {element.group_name && (
-            <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: 4 }}>
+            <div style={{ color: '#808080', fontSize: '0.85rem', marginTop: 4 }}>
               {element.group_name} · Period {element.period} · Block {element.block?.toUpperCase()}
             </div>
           )}
@@ -70,7 +70,7 @@ const ElementPage: React.FC = () => {
             <div style={{
               width: '100%', height: '100%',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              color: 'var(--text-muted)', fontSize: '0.9rem'
+              color: '#808080', fontSize: '0.9rem'
             }}>
               Loading 3D Model...
             </div>
@@ -78,7 +78,7 @@ const ElementPage: React.FC = () => {
             {element.local_bohr_model_3d || element.bohr_model_3d ? (
               <GLBViewer url={element.local_bohr_model_3d || element.bohr_model_3d!} />
             ) : (
-              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
+              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#808080' }}>
                 No 3D Model Available
               </div>
             )}
@@ -93,7 +93,7 @@ const ElementPage: React.FC = () => {
           {element.summary_extended || element.summary}
         </p>
         {element.summary_extended && (
-          <p style={{ marginTop: 8, fontSize: '0.75rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>
+          <p style={{ marginTop: 8, fontSize: '0.75rem', color: '#808080', fontStyle: 'italic' }}>
             Source: Simple English Wikipedia
           </p>
         )}
@@ -110,12 +110,13 @@ const ElementPage: React.FC = () => {
         <h2><span className="section-icon">🔬</span> Electron Configuration</h2>
         <div style={{
           padding: 'var(--space-md)',
-          background: 'var(--bg-surface)',
-          borderRadius: 'var(--radius-md)',
+          background: '#ffffff',
+          borderRadius: 0,
           fontFamily: 'var(--font-mono)',
           fontSize: '1.1rem',
           letterSpacing: '0.03em',
-          color: 'var(--text-accent)',
+          color: '#000080',
+          boxShadow: 'inset 1px 1px 0 #808080, inset -1px -1px 0 #ffffff, inset 2px 2px 0 #404040, inset -2px -2px 0 #d4d0c8',
         }}>
           {element.electron_configuration}
         </div>
@@ -123,15 +124,15 @@ const ElementPage: React.FC = () => {
           <div style={{
             marginTop: 8,
             padding: 'var(--space-sm) var(--space-md)',
-            color: 'var(--text-secondary)',
+            color: '#404040',
             fontSize: '0.9rem',
           }}>
-            Noble gas notation: <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--text-accent)' }}>
+            Noble gas notation: <span style={{ fontFamily: 'var(--font-mono)', color: '#000080' }}>
               {element.electron_configuration_semantic}
             </span>
           </div>
         )}
-        <div style={{ marginTop: 12, color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+        <div style={{ marginTop: 12, color: '#404040', fontSize: '0.9rem' }}>
           Electron shells: {element.shells.join(', ')}
         </div>
       </section>
@@ -140,7 +141,7 @@ const ElementPage: React.FC = () => {
       {(element.discovered_by || element.named_by) && (
         <section className="element-section animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           <h2><span className="section-icon">🏛️</span> Discovery & History</h2>
-          <div style={{ color: 'var(--text-secondary)', lineHeight: 1.8 }}>
+          <div style={{ color: '#404040', lineHeight: 1.7 }}>
             {element.discovered_by && (
               <p>
                 <strong>Discovered by:</strong> {element.discovered_by}
@@ -169,7 +170,7 @@ const ElementPage: React.FC = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {element.image && (element.image.local_url || element.image.url) && (
             <div>
-              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Sample Image</h3>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: '#000000' }}>Sample Image</h3>
               <img
                 src={element.image.local_url || element.image.url}
                 alt={element.image.title || `${element.name} sample`}
@@ -186,7 +187,7 @@ const ElementPage: React.FC = () => {
 
           {(element.local_spectral_img || element.spectral_img) && (
             <div>
-              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Spectral Image</h3>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: '#000000' }}>Spectral Image</h3>
               <img
                 src={element.local_spectral_img || element.spectral_img!}
                 alt={`${element.name} spectrum`}
@@ -199,7 +200,7 @@ const ElementPage: React.FC = () => {
 
           {(element.local_bohr_model_image || element.bohr_model_image) && (
             <div>
-              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Bohr Model (2D)</h3>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: '#000000' }}>Bohr Model (2D)</h3>
               <div style={{ background: '#ffffff', display: 'inline-block', padding: '1.5rem', borderRadius: 'var(--radius-lg)' }}>
                 <img
                   src={element.local_bohr_model_image || element.bohr_model_image!}
