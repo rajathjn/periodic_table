@@ -8,7 +8,7 @@ const DiscoverElement: React.FC = () => {
 
   return (
     <section className="discover-section">
-      <h2>
+      <h2 className="minecraft-font">
         ✨ <span className="gradient-text">Discover an Element</span>
       </h2>
       <Link to={`/elements/${element.symbol}`} className="discover-card" style={{ textDecoration: 'none', color: 'inherit' }}>

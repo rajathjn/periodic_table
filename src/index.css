@@ -2,6 +2,24 @@
    PERIODIC TABLE — WINDOWS 98 RETRO THEME
    ============================================= */
 
+/* --- Minecraft Pixel Font --- */
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/fonts/VCR_OSD_MONO.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.minecraft-font {
+  font-family: 'Minecraft', 'Pixelify Sans', monospace;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  text-rendering: optimizeSpeed;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+}
+
 /* --- CSS Custom Properties --- */
 :root {
   /* Background & Surface */

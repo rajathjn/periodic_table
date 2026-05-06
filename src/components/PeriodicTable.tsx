@@ -32,8 +32,8 @@ const PeriodicTable: React.FC = () => {
   return (
     <div className="periodic-table-wrapper">
       <div className="periodic-table-title">
-        <h1>
-          <span className="gradient-text">The Periodic Table</span> of Elements
+        <h1 className="minecraft-font">
+          <span className="gradient-text">THE PERIODIC TABLE OF ELEMENTS</span> 
         </h1>
         <p>Explore all 118 elements — click any element to learn more</p>
       </div>
