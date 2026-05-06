@@ -22,15 +22,15 @@ An interactive, Windows 98-themed periodic table web app built with **React**, *
 
 ## 🛠️ Tech Stack
 
-| Layer        | Technology                                                                  |
-|-------------|-----------------------------------------------------------------------------|
-| Framework   | [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) |
-| Build Tool  | [Vite 8](https://vite.dev/)                                                |
-| 3D Rendering| [Three.js](https://threejs.org/) + [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) + [Drei](https://github.com/pmndrs/drei) |
-| Routing     | [React Router v7](https://reactrouter.com/)                                |
-| Styling     | Vanilla CSS with CSS custom properties (Windows 98 theme)                  |
-| Fonts       | [Pixelify Sans](https://fonts.google.com/specimen/Pixelify+Sans), [VT323](https://fonts.google.com/specimen/VT323), VCR OSD Mono |
-| Hosting     | [GitHub Pages](https://pages.github.com/)                                  |
+| Layer         | Technology                                                                                                                       |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Framework     | [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)                                                   |
+| Build Tool    | [Vite 8](https://vite.dev/)                                                                                                      |
+| 3D Rendering  | [Three.js](https://threejs.org/) + [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) + [Drei](https://github.com/pmndrs/drei) |
+| Routing       | [React Router v7](https://reactrouter.com/)                                                                                      |
+| Styling       | Vanilla CSS with CSS custom properties (Windows 98 theme)                                                                        |
+| Fonts         | [Pixelify Sans](https://fonts.google.com/specimen/Pixelify+Sans), [VT323](https://fonts.google.com/specimen/VT323), VCR OSD Mono |
+| Hosting       | [GitHub Pages](https://pages.github.com/)                                                                                        |
 
 ---
 
@@ -83,7 +83,7 @@ Starts a local server to preview the production build.
 
 ## 📁 Project Structure
 
-```
+```text
 periodic_table/
 ├── .github/workflows/     # GitHub Actions CI/CD
 │   └── node.js.yml        # Builds and deploys to gh-pages on push to main
