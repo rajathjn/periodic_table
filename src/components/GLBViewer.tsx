@@ -1,14 +1,29 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF, Stage } from '@react-three/drei';
+import { OrbitControls, useGLTF, useAnimations, Stage } from '@react-three/drei';
+import type { Group } from 'three';
 
 interface GLBViewerProps {
   url: string;
 }
 
 function Model({ url }: { url: string }) {
-  const { scene } = useGLTF(url);
-  return <primitive object={scene} />;
+  const group = useRef<Group>(null);
+  const { scene, animations } = useGLTF(url);
+  const { actions } = useAnimations(animations, group);
+
+  useEffect(() => {
+    // Play all baked-in animation clips (orbital tilts + electron motion)
+    Object.values(actions).forEach(action => {
+      action?.play();
+    });
+  }, [actions]);
+
+  return (
+    <group ref={group}>
+      <primitive object={scene} />
+    </group>
+  );
 }
 
 const GLBViewer: React.FC<GLBViewerProps> = ({ url }) => {
@@ -26,6 +41,3 @@ const GLBViewer: React.FC<GLBViewerProps> = ({ url }) => {
 };
 
 export default GLBViewer;
-
-// Preload is not strictly necessary for dynamic URLs unless we know them ahead of time,
-// but useGLTF caches them automatically once loaded.
