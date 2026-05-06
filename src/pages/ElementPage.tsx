@@ -83,6 +83,11 @@ const ElementPage: React.FC = () => {
               {element.group_name} · Period {element.period} · Block {element.block?.toUpperCase()}
             </div>
           )}
+          {element.fun_fact && (
+            <div style={{ color: '#404040', fontSize: '0.95rem', marginTop: 12, maxWidth: '80%' }}>
+              <span role="img" aria-label="fun fact">💡</span> {element.fun_fact}
+            </div>
+          )}
         </div>
 
         {/* Interactive 3D Bohr atom model */}

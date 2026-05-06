@@ -45,7 +45,8 @@
     "summary_extended": "Hydrogen is the lightest and most abundant element in the universe. It is the simplest element and the first in the periodic table. It has the chemical symbol H and atomic number 1, which means it has just one proton in its nucleus. Hydrogen also has a standard atomic weight of 1.008. Hydrogen is a colorless, odorless, and tasteless gas at room temperature. It is also highly flammable. When hydrogen burns in oxygen, it creates water and releases a lot of energy.",
     "local_bohr_model_3d": "/assets/elements/H/model.glb",
     "local_bohr_model_image": "/assets/elements/H/bohr_image.png",
-    "local_spectral_img": "/assets/elements/H/spectral.jpg"
+    "local_spectral_img": "/assets/elements/H/spectral.jpg",
+    "fun_fact": "Hydrogen is the most common element in the universe, making up about 75% of its mass."
   },
   {
     "number": 2,
@@ -94,7 +95,8 @@
     "summary_extended": "Helium is a chemical element. It has the chemical symbol He, atomic number 2, and atomic weight of about 4.002602. There are 9 isotopes of helium, only two of which are stable. These are 3He and 4He. 4He is by far the most common isotope.",
     "local_bohr_model_3d": "/assets/elements/He/model.glb",
     "local_bohr_model_image": "/assets/elements/He/bohr_image.png",
-    "local_spectral_img": "/assets/elements/He/spectral.jpg"
+    "local_spectral_img": "/assets/elements/He/spectral.jpg",
+    "fun_fact": "Helium was discovered on the sun before it was found on the earth."
   },
   {
     "number": 3,
@@ -144,7 +146,8 @@
     "group_name": "Alkali Metals (Group 1)",
     "summary_extended": "Lithium is a soft, silver-white metal with symbol Li. It is the third chemical element in the periodic table. This means that it has 3 protons in its nucleus and 3 electrons around it. Its atomic number is 3. Its mass number is 6.94. It has two common isotopes, 6Li and 7Li. 7Li is more common; 92.5% of lithium is 7Li. Lithium is a soft silvery metal that is very reactive. It is used in lithium batteries and certain medicines.",
     "local_bohr_model_3d": "/assets/elements/Li/model.glb",
-    "local_bohr_model_image": "/assets/elements/Li/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Li/bohr_image.png",
+    "fun_fact": "Although it is a metal, Lithium it is soft enough to cut with a knife."
   },
   {
     "number": 4,
@@ -195,7 +198,8 @@
     "group_name": "Alkaline Earth Metals (Group 2)",
     "summary_extended": "Beryllium is in group 2 of the periodic table, so it is an alkaline earth metal. It is grayish in color. It has an atomic number of 4 and is symbolized by the letters Be. It is toxic and should not be handled without proper training.",
     "local_bohr_model_3d": "/assets/elements/Be/model.glb",
-    "local_bohr_model_image": "/assets/elements/Be/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Be/bohr_image.png",
+    "fun_fact": "Beryllium is a component of several dental alloys."
   },
   {
     "number": 5,
@@ -247,7 +251,8 @@
     "group_name": "Boron Group (Group 13)",
     "summary_extended": "Boron is a chemical element. It has the chemical symbol B. It has the atomic number 5. It is a metalloid. Much boron is found in chemical compounds in its ore borax. Boron is never found free in nature.",
     "local_bohr_model_3d": "/assets/elements/B/model.glb",
-    "local_bohr_model_image": "/assets/elements/B/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/B/bohr_image.png",
+    "fun_fact": "Boron is an essential plant nutrient, required primarily for maintaining the integrity of cell walls."
   },
   {
     "number": 6,
@@ -301,7 +306,8 @@
     "summary_extended": "Carbon is a very important chemical element, with a chemical symbol of C. All known life on Earth needs it to survive. Carbon has atomic mass 12 and atomic number 6. It is a nonmetal, meaning that it is not a metal.",
     "local_bohr_model_3d": "/assets/elements/C/model.glb",
     "local_bohr_model_image": "/assets/elements/C/bohr_image.png",
-    "local_spectral_img": "/assets/elements/C/spectral.jpg"
+    "local_spectral_img": "/assets/elements/C/spectral.jpg",
+    "fun_fact": "Carbon is the second most abundant element in the human body by mass (about 18.5%) after oxygen."
   },
   {
     "number": 7,
@@ -356,7 +362,8 @@
     "summary_extended": "Nitrogen is a nonmetal chemical element. The atmosphere contains more than 78 percent of nitrogen. It has the chemical symbol N and atomic number 7. Its stable inside typically contains 14 nucleons. It has 5 electrons in its outer shell.",
     "local_bohr_model_3d": "/assets/elements/N/model.glb",
     "local_bohr_model_image": "/assets/elements/N/bohr_image.png",
-    "local_spectral_img": "/assets/elements/N/spectral.jpg"
+    "local_spectral_img": "/assets/elements/N/spectral.jpg",
+    "fun_fact": "Liquid nitrogen is used in molecular gastronomy to make ultra-smooth ice cream."
   },
   {
     "number": 8,
@@ -412,7 +419,8 @@
     "summary_extended": "Oxygen is a chemical element. It has the symbol O and atomic number 8. It is a colorless, odorless, and tasteless gas at 25 degrees Celsius at Standard atmosphere .\nOxygen is part of the air we breathe. It makes up about 21% of Earth’s atmosphere. It is the third most common element in the universe, after hydrogen and helium. Oxygen is part of the chalcogen group on the periodic table. Oxygen is very reactive, meaning it easily combines with other elements. It often forms oxides, like iron oxide (rust) or carbon dioxide (CO₂). It supports combustion, which means it helps things burn, but it does not burn by itself. In its most common form, oxygen exists as a diatomic molecule (O₂), meaning two oxygen atoms are joined together. There is also a special form called ozone (O₃), made of three oxygen atoms. Ozone is more reactive than normal oxygen and helps protect Earth by blocking harmful ultraviolet (UV) rays from the Sun. Oxygen supports respiration, the process living things use to turn food into energy.",
     "local_bohr_model_3d": "/assets/elements/O/model.glb",
     "local_bohr_model_image": "/assets/elements/O/bohr_image.png",
-    "local_spectral_img": "/assets/elements/O/spectral.jpg"
+    "local_spectral_img": "/assets/elements/O/spectral.jpg",
+    "fun_fact": "As a gas, oxygen is clear. As a liquid, it's pale blue."
   },
   {
     "number": 9,
@@ -468,7 +476,8 @@
     "group_name": "Halogens (Group 17)",
     "summary_extended": "Fluorine is a chemical element that is very poisonous. Its atomic number is 9, and its atomic mass is 19. It is part of the Group 7 (halogens) on the periodic table of elements.",
     "local_bohr_model_3d": "/assets/elements/F/model.glb",
-    "local_bohr_model_image": "/assets/elements/F/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/F/bohr_image.png",
+    "fun_fact": "Initial studies on fluorine were so dangerous that several 19th-century experimenters were deemed \"fluorine martyrs\" after misfortunes with hydrofluoric acid."
   },
   {
     "number": 10,
@@ -526,7 +535,8 @@
     "summary_extended": "Neon is a chemical element on the periodic table. It is part of the noble gas group and it has an atomic number of 10. It is an odorless and tasteless gas.",
     "local_bohr_model_3d": "/assets/elements/Ne/model.glb",
     "local_bohr_model_image": "/assets/elements/Ne/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Ne/spectral.jpg"
+    "local_spectral_img": "/assets/elements/Ne/spectral.jpg",
+    "fun_fact": "Neon is abundant on a universal scale; it is the fifth most abundant chemical element in the universe by mass, after hydrogen, helium, oxygen, and carbon."
   },
   {
     "number": 11,
@@ -586,7 +596,8 @@
     "summary_extended": "Sodium is a chemical element with an atomic number of 11. Its symbol is Na (from its Latin name natrium). It is an alkali metal. Although sodium has many isotopes, most decay in a short time. Because of this, all sodium in nature (mainly found in seawater) is of the isotope 11Na23. The atomic mass of sodium is 22.9898.",
     "local_bohr_model_3d": "/assets/elements/Na/model.glb",
     "local_bohr_model_image": "/assets/elements/Na/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Na/spectral.jpg"
+    "local_spectral_img": "/assets/elements/Na/spectral.jpg",
+    "fun_fact": "The most common sodium compound is sodium chloride - table salt."
   },
   {
     "number": 12,
@@ -647,7 +658,8 @@
     "summary_extended": "Magnesium is a chemical element. It has the symbol Mg, atomic number 12 and common oxidation state +2. It is an alkaline earth metal and the eighth most abundant element in the Earth's crust. It makes up 2% of the mass of the crust. It is the ninth most common element in the known universe. This is because it is easily built up in supernova stars by addition of three helium nuclei to carbon. Magnesium ion's high solubility in water helps ensure that it is the third most abundant element dissolved in seawater.",
     "local_bohr_model_3d": "/assets/elements/Mg/model.glb",
     "local_bohr_model_image": "/assets/elements/Mg/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Mg/spectral.jpg"
+    "local_spectral_img": "/assets/elements/Mg/spectral.jpg",
+    "fun_fact": "The top producers of magnesium by the second decade of the 21st century included China, Russia and Turkey."
   },
   {
     "number": 13,
@@ -708,7 +720,8 @@
     "group_name": "Boron Group (Group 13)",
     "summary_extended": "Aluminium is a chemical element. The symbol for aluminium is Al, and its atomic number is 13. Aluminium is the most abundant metal. It is a mononuclidic element.",
     "local_bohr_model_3d": "/assets/elements/Al/model.glb",
-    "local_bohr_model_image": "/assets/elements/Al/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Al/bohr_image.png",
+    "fun_fact": "Despite its widespread occurrence in the Earth's crust, aluminium has no known function in biology."
   },
   {
     "number": 14,
@@ -771,7 +784,8 @@
     "summary_extended": "Silicon is a chemical element. Its atomic number is 14 on the periodic table. Its symbol is Si. It is a hard, brittle crystalline solid. It is a tetravalent metalloid and semiconductor. It is a member of group 14 in the periodic table.",
     "local_bohr_model_3d": "/assets/elements/Si/model.glb",
     "local_bohr_model_image": "/assets/elements/Si/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Si/spectral.jpg"
+    "local_spectral_img": "/assets/elements/Si/spectral.jpg",
+    "fun_fact": " Santa Clara Valley in California acquired the nickname Silicon Valley, as the element is the base material in the semiconductor industry there."
   },
   {
     "number": 15,
@@ -834,7 +848,8 @@
     "group_name": "Pnictogens (Group 15)",
     "summary_extended": "Phosphorus has the chemical symbol P, and its atomic number is 15. Its mass number is 30.97. It is not found in nature as an element, but as compounds, such as phosphates. There are many different forms. The most common form is a red or white waxy solid.",
     "local_bohr_model_3d": "/assets/elements/P/model.glb",
-    "local_bohr_model_image": "/assets/elements/P/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/P/bohr_image.png",
+    "fun_fact": "Elemental phosphorus exists in two major forms, white phosphorus and red phosphorus, but because it is highly reactive, phosphorus is never found as a free element on Earth. "
   },
   {
     "number": 16,
@@ -899,7 +914,8 @@
     "summary_extended": "Sulfur or sulphur is a chemical element. The symbol for sulfur is S, and its atomic number is 16. Old English name, appearing in the Bible, is brimstone.",
     "local_bohr_model_3d": "/assets/elements/S/model.glb",
     "local_bohr_model_image": "/assets/elements/S/bohr_image.png",
-    "local_spectral_img": "/assets/elements/S/spectral.jpg"
+    "local_spectral_img": "/assets/elements/S/spectral.jpg",
+    "fun_fact": "According to the Ebers Papyrus, a sulfur ointment was used in ancient Egypt to treat granular eyelids."
   },
   {
     "number": 17,
@@ -965,7 +981,8 @@
     "summary_extended": "Chlorine is a chemical element. Its atomic number is 17, and its atomic mass is 35.45. It is part of the 7th column (halogens) on the periodic table of elements.",
     "local_bohr_model_3d": "/assets/elements/Cl/model.glb",
     "local_bohr_model_image": "/assets/elements/Cl/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Cl/spectral.png"
+    "local_spectral_img": "/assets/elements/Cl/spectral.png",
+    "fun_fact": "Chlorine gas, also known as bertholite, was first used as a weapon in World War I. As described by the soldiers, it had the distinctive smell of a mixture of pepper and pineapple. "
   },
   {
     "number": 18,
@@ -1032,7 +1049,8 @@
     "summary_extended": "Argon is a chemical element. Its symbol is argon is Ar and its atomic number is 18. It is part of the noble gas group. It is an odorless and tasteless gas. Argon is the third-most abundant gas in the Earth's atmosphere.",
     "local_bohr_model_3d": "/assets/elements/Ar/model.glb",
     "local_bohr_model_image": "/assets/elements/Ar/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Ar/spectral.png"
+    "local_spectral_img": "/assets/elements/Ar/spectral.png",
+    "fun_fact": "Air is the primary industrial source of purified argon products."
   },
   {
     "number": 19,
@@ -1101,7 +1119,8 @@
     "summary_extended": "Potassium is a chemical element in the periodic table. It has the symbol K. This symbol is taken from the Latin word kalium. Potassium's atomic number is 19. It has 19 protons and electrons. Potassium is not found as an element in nature, because it is so reactive.",
     "local_bohr_model_3d": "/assets/elements/K/model.glb",
     "local_bohr_model_image": "/assets/elements/K/bohr_image.png",
-    "local_spectral_img": "/assets/elements/K/spectral.jpg"
+    "local_spectral_img": "/assets/elements/K/spectral.jpg",
+    "fun_fact": "Potassium was the first metal that was isolated by electrolysis.."
   },
   {
     "number": 20,
@@ -1171,7 +1190,8 @@
     "summary_extended": "Calcium is a chemical element. Its symbol on the periodic table is Ca. and its atomic number is 20. The atomic number says where Calcium sits in the periodic table. It has 20 protons and 20 electrons. The most common isotopes are Ca-40 and Ca-44. Its mass number is about 40.07.",
     "local_bohr_model_3d": "/assets/elements/Ca/model.glb",
     "local_bohr_model_image": "/assets/elements/Ca/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Ca/spectral.png"
+    "local_spectral_img": "/assets/elements/Ca/spectral.png",
+    "fun_fact": "Calcium is the main component of teeth and bones."
   },
   {
     "number": 21,
@@ -1241,7 +1261,8 @@
     "group_name": "Group 3",
     "summary_extended": "Scandium is chemical element. Its symbol is Sc. It has an atomic number of 21 on the periodic table.",
     "local_bohr_model_3d": "/assets/elements/Sc/model.glb",
-    "local_bohr_model_image": "/assets/elements/Sc/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Sc/bohr_image.png",
+    "fun_fact": "Scandium is more abundant on the moon and the sun than on Earth."
   },
   {
     "number": 22,
@@ -1312,7 +1333,8 @@
     "group_name": "Group 4",
     "summary_extended": "Titanium is a very strong metal that is used in special applications. The most common isotope has 26 neutrons. Titanium was discovered in 1791 by William Gregor. It is chemical element number 22 on the periodic table. Its symbol is Ti. It has 22 electrons and 22 protons. Its name comes from the name of the strong Greek gods called Titans.",
     "local_bohr_model_3d": "/assets/elements/Ti/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ti/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ti/bohr_image.png",
+    "fun_fact": "Titanium is a corrosion resistant element, even from water and chlorine."
   },
   {
     "number": 23,
@@ -1384,7 +1406,8 @@
     "group_name": "Group 5",
     "summary_extended": "Vanadium is chemical element 23 on the periodic table. Its symbol is V. It is a metal and is part of the group known as the transition metals. It is gray-blue colored. It is mostly used in steel where it helps strengthen the steel metal. It is named after Vanadis, another name of Freyja.",
     "local_bohr_model_3d": "/assets/elements/V/model.glb",
-    "local_bohr_model_image": "/assets/elements/V/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/V/bohr_image.png",
+    "fun_fact": "Vanadium is harder than most metals and steels."
   },
   {
     "number": 24,
@@ -1457,7 +1480,8 @@
     "group_name": "Group 6",
     "summary_extended": "Chromium is a chemical element. Its symbol on the periodic table is Cr. It always has 24 protons, so its atomic number is 24. Its mass number is about 54. Most of the times it has 28 neutrons, but different isotopes have more or fewer neutrons. As a metal, it has 24 electrons. Its ions have fewer electrons.",
     "local_bohr_model_3d": "/assets/elements/Cr/model.glb",
-    "local_bohr_model_image": "/assets/elements/Cr/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Cr/bohr_image.png",
+    "fun_fact": "Chromium is extremely hard, and is the third hardest element behind carbon (diamond) and boron."
   },
   {
     "number": 25,
@@ -1531,7 +1555,8 @@
     "group_name": "Group 7",
     "summary_extended": "Manganese is chemical element 25 on the periodic table. Its symbol is Mn.. Manganese is used a lot in steel to make it stronger. This is the main use for manganese metal. Manganese compounds, particularly manganese(IV) oxide, are used in alkaline cells and Leclanche cells. Manganese metal is also alloyed with aluminium.",
     "local_bohr_model_3d": "/assets/elements/Mn/model.glb",
-    "local_bohr_model_image": "/assets/elements/Mn/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Mn/bohr_image.png",
+    "fun_fact": "Manganese makes an essential element for photosynthesis. There would be no free oxygen on earth without it."
   },
   {
     "number": 26,
@@ -1608,7 +1633,8 @@
     "summary_extended": "Iron is a chemical element and a metal. It is the most common chemical element on Earth, and the most widely used metal. It makes up much of the Earth's core, and is the fourth most common element in the Earth's crust. Its atomic number is 26, because each atom has 26 protons.",
     "local_bohr_model_3d": "/assets/elements/Fe/model.glb",
     "local_bohr_model_image": "/assets/elements/Fe/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Fe/spectral.jpg"
+    "local_spectral_img": "/assets/elements/Fe/spectral.jpg",
+    "fun_fact": "Blood is red because of the interaction between iron and oxygen."
   },
   {
     "number": 27,
@@ -1684,7 +1710,8 @@
     "group_name": "Group 9",
     "summary_extended": "Cobalt is a chemical element. It has an atomic number of 27 and an atomic mass of about 59. It is a metal.",
     "local_bohr_model_3d": "/assets/elements/Co/model.glb",
-    "local_bohr_model_image": "/assets/elements/Co/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Co/bohr_image.png",
+    "fun_fact": "Alloys of cobalt are used in jet turbines."
   },
   {
     "number": 28,
@@ -1761,7 +1788,8 @@
     "group_name": "Group 10",
     "summary_extended": "Nickel is an element. It has an atomic number of 28 and an atomic mass of about 58.69amu. It has 28 protons. It is a transition metal.",
     "local_bohr_model_3d": "/assets/elements/Ni/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ni/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ni/bohr_image.png",
+    "fun_fact": "Nickel resists corrosion even at high temperatures."
   },
   {
     "number": 29,
@@ -1839,7 +1867,8 @@
     "group_name": "Coinage Metals (Group 11)",
     "summary_extended": "Copper is a chemical element. It is the 29th element in the periodic table. Its atomic weight is 63.55. It is a transition metal in the middle of the periodic table. The symbol for copper is \"Cu\", which comes from the Latin word cuprum, which, in turn, came from the Latin word for the island of Cyprus, where copper was found.",
     "local_bohr_model_3d": "/assets/elements/Cu/model.glb",
-    "local_bohr_model_image": "/assets/elements/Cu/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Cu/bohr_image.png",
+    "fun_fact": "Copper was one of the first metal to be worked by man, along with gold and meteoritic iron."
   },
   {
     "number": 30,
@@ -1909,7 +1938,8 @@
     "group_name": "Group 12",
     "summary_extended": "Zinc, sometimes called spelter, is a chemical element. It is in the group of metals called the transition metals. It is sometimes considered a post-transition metal. Its symbol on the periodic table is \"Zn\". Zinc is the 30th element on the periodic table, and has an atomic number of 30. Zinc has a mass number of 65.38. It contains 30 protons and 30 electrons. In total, 29 isotopes of zinc are known, and five of these occur in nature. Some isotopes are radioactive. Their half-lives are between 40 milliseconds for 57Zn and 5x1018 years for 70Zn.",
     "local_bohr_model_3d": "/assets/elements/Zn/model.glb",
-    "local_bohr_model_image": "/assets/elements/Zn/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Zn/bohr_image.png",
+    "fun_fact": "The oldest known pills were made of the zinc carbonates hydrozincite and smithsonite. The pills were used for sore eyes and were found aboard the Roman ship Relitto del Pozzino, wrecked in 140 BC."
   },
   {
     "number": 31,
@@ -1962,7 +1992,8 @@
     "group_name": "Boron Group (Group 13)",
     "summary_extended": "Gallium is element 31 on the periodic table. It is a soft, gray metal that is rare on Earth. It can easily be melted just by holding it in your hand, as its melting point is very low 29.76 Celsius, however it also sticks to your hand a lot, unlike mercury. Gallium is a semiconductor, and as the compound Gallium arsenide it is used in electronics and LEDs. Then, Gallium is also used in mirrors. Gallium can also be alloyed with indium and tin to create galinstan. Gallium is similar to the elements aluminium, indium, and mercury. Gallium is also used to make alloys that are liquid at room temperature. These can be used as a thermal paste for computers, and as a substitute for mercury in some applications.",
     "local_bohr_model_3d": "/assets/elements/Ga/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ga/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ga/bohr_image.png",
+    "fun_fact": "A well-known prank among chemists is to make gallium spoons and use them to serve tea to unsuspecting guests, since gallium has a similar appearance to its lighter homolog aluminium. The spoons then melt in the hot tea."
   },
   {
     "number": 32,
@@ -2016,7 +2047,8 @@
     "group_name": "Carbon Group (Group 14)",
     "summary_extended": "Germanium is a chemical element. Its chemical symbol is Ge. Its atomic number is 32. It was discovered by Clemens Winkler. It is a shiny, hard, silver-white metalloid. The chemistry of Germanium is quite like tin. Germanium forms many organometallic compounds. It is an important semiconductor material used in transistors. Many of the earliest transistors were based on germanium. Most later ones were based on silicon. The sound of germanium-based amplifiers and effect pedals is associated with 1960s-era rock music. Germanium-based guitar pedals are still made and are often used for their classic sound.",
     "local_bohr_model_3d": "/assets/elements/Ge/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ge/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ge/bohr_image.png",
+    "fun_fact": "Germanium is created by stellar nucleosynthesis. It has been detected in some of the most distant stars and in the atmosphere of Jupiter."
   },
   {
     "number": 33,
@@ -2071,7 +2103,8 @@
     "group_name": "Pnictogens (Group 15)",
     "summary_extended": "Arsenic is chemical element 33 on the periodic table. Its symbol is As. Its atomic number is 33 and its atomic mass is 74.92. It is a toxic metalloid. It is in the pnictogen group on the periodic table.",
     "local_bohr_model_3d": "/assets/elements/As/model.glb",
-    "local_bohr_model_image": "/assets/elements/As/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/As/bohr_image.png",
+    "fun_fact": "In the Victorian era, \"arsenic\" (\"white arsenic\" or arsenic trioxide) was mixed with vinegar and chalk and eaten by women to improve the complexion of their faces, making their skin paler to show they did not work in the fields."
   },
   {
     "number": 34,
@@ -2127,7 +2160,8 @@
     "group_name": "Chalcogens (Group 16)",
     "summary_extended": "Selenium is a chemical element. Its chemical symbol is Se and its atomic number is 34. It has 34 protons and 34 electrons and a mass number of 78.96.",
     "local_bohr_model_3d": "/assets/elements/Se/model.glb",
-    "local_bohr_model_image": "/assets/elements/Se/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Se/bohr_image.png",
+    "fun_fact": "Selenium is used in glassmaking."
   },
   {
     "number": 35,
@@ -2184,7 +2218,8 @@
     "group_name": "Halogens (Group 17)",
     "summary_extended": "Bromine (Br) is a chemical element. Its atomic number is 35, and its atomic weight is 80. It is part of the Group 7 elements (halogens) on the periodic table. It is diatomic, which means that two atoms are stuck together to make a molecule in any bromine sample.",
     "local_bohr_model_3d": "/assets/elements/Br/model.glb",
-    "local_bohr_model_image": "/assets/elements/Br/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Br/bohr_image.png",
+    "fun_fact": "Bromine is used to purify water."
   },
   {
     "number": 36,
@@ -2264,7 +2299,8 @@
     "summary_extended": "Krypton is a stable noble gas. It has an atomic number of 36. The name krypton comes from the Greek word kryptos meaning hidden. It is used in fluorescent lamps, flashbulbs, and as a wavelength standard. The metre used to be defined as 1,650,763.73 wavelengths in a vacuum of krypton gas.",
     "local_bohr_model_3d": "/assets/elements/Kr/model.glb",
     "local_bohr_model_image": "/assets/elements/Kr/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Kr/spectral.jpg"
+    "local_spectral_img": "/assets/elements/Kr/spectral.jpg",
+    "fun_fact": "Krypton is one of the gases used in Neon Signs."
   },
   {
     "number": 37,
@@ -2324,7 +2360,8 @@
     "group_name": "Alkali Metals (Group 1)",
     "summary_extended": "Rubidium is chemical element 37 on the periodic table. Its symbol is Rb. Its atomic mass is 85.47. It has 37 protons and 37 electrons. It is a soft silver colored metal. It was first discovered in 1861 by Robert Bunsen and Gustav Kirchoff in Heidelberg, Germany.",
     "local_bohr_model_3d": "/assets/elements/Rb/model.glb",
-    "local_bohr_model_image": "/assets/elements/Rb/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Rb/bohr_image.png",
+    "fun_fact": "Rubidium has been used extensively in dating rocks."
   },
   {
     "number": 38,
@@ -2385,7 +2422,8 @@
     "group_name": "Alkaline Earth Metals (Group 2)",
     "summary_extended": "Strontium is a chemical element. It has the chemical symbol Sr. It has the atomic number 38. It is a metal. The color of the metal is silver-white or yellow-silver. The metal is soft, and highly reactive chemically.",
     "local_bohr_model_3d": "/assets/elements/Sr/model.glb",
-    "local_bohr_model_image": "/assets/elements/Sr/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Sr/bohr_image.png",
+    "fun_fact": "Finely powdered strontium metal is pyrophoric, meaning that it will ignite spontaneously in air at room temperature."
   },
   {
     "number": 39,
@@ -2447,7 +2485,8 @@
     "group_name": "Group 3",
     "summary_extended": "Yttrium is a chemical elemental metal with an atomic number of 39, a chemical symbol of Y, and an atomic weight of 88.905(abridged). It is classified as a transition metal. It is atomic number 39 which means it has 39 protons in an atom. It is silvery-white, solid at room temperature, and tends to form crystals. In chunk form, it is unreactive in air, but powdered yttrium may burn at 400 degrees Celsius. It has several uses, which include lasers, TV's, and metallurgy. It is a transition metal, and along with terbium, erbium, and ytterbium, is one of the four elements to be named after the town of Ytterby in Sweden, all of which are rare earth elements.\n",
     "local_bohr_model_3d": "/assets/elements/Y/model.glb",
-    "local_bohr_model_image": "/assets/elements/Y/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Y/bohr_image.png",
+    "fun_fact": "The NASA Apollo missions to the Moon brought back samples of lunar rock which contained yttrium."
   },
   {
     "number": 40,
@@ -2503,7 +2542,8 @@
     "group_name": "Group 4",
     "summary_extended": "Zirconium is a chemical elemental metal. It is a greyish-white in color. It is atomic number 40 on the periodic table. Its symbol is Zr. And it is in the family of four (4). Zirconium alloys are used as cladding for nuclear fuel rods.",
     "local_bohr_model_3d": "/assets/elements/Zr/model.glb",
-    "local_bohr_model_image": "/assets/elements/Zr/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Zr/bohr_image.png",
+    "fun_fact": "Because of zirconium's excellent resistance to corrosion, it is often used as an alloying agent in materials that are exposed to aggressive environments, such as surgical appliances, light filaments, and watch cases."
   },
   {
     "number": 41,
@@ -2560,7 +2600,8 @@
     "group_name": "Group 5",
     "summary_extended": "Niobium is a chemical element. It is sometimes named columbium. It has the chemical symbol Nb. It has the atomic number 41. It is a rare metal. Niobium is hard and grey. It is ductile. In chemistry it is placed in a group of metal elements named the transition metals. Niobium was discovered in a variety of a mineral called columbite. Niobite is an ore of niobium.",
     "local_bohr_model_3d": "/assets/elements/Nb/model.glb",
-    "local_bohr_model_image": "/assets/elements/Nb/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Nb/bohr_image.png",
+    "fun_fact": "Niobium is almost always found in nature together with tantalum."
   },
   {
     "number": 42,
@@ -2640,7 +2681,8 @@
     "group_name": "Group 6",
     "summary_extended": "Molybdenum is a chemical element. It has the chemical symbol Mo. It has the atomic number 42. It has 35 isotopes. The name Molybdenum is from the Greek meaning \"leadlike\". The color of pure molybdenum is silvery-white. It does not occur naturally, and is made from molybdenite.",
     "local_bohr_model_3d": "/assets/elements/Mo/model.glb",
-    "local_bohr_model_image": "/assets/elements/Mo/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Mo/bohr_image.png",
+    "fun_fact": "Molybdenum has one of the highest melting points."
   },
   {
     "number": 43,
@@ -2693,7 +2735,8 @@
     "group_name": "Group 7",
     "summary_extended": "Technetium is a radioactive chemical element that has the chemical symbol Tc and has the atomic number 43. It is the lightest synthetic element.",
     "local_bohr_model_3d": "/assets/elements/Tc/model.glb",
-    "local_bohr_model_image": "/assets/elements/Tc/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Tc/bohr_image.png",
+    "fun_fact": "Technetium was the first element to be produced artificially."
   },
   {
     "number": 44,
@@ -2746,7 +2789,8 @@
     "group_name": "Group 8",
     "summary_extended": "Ruthenium is a chemical element. It has the chemical symbol Ru. It has the atomic number 44. It is a rare metal. It is silver white. In chemistry it is placed in a group of metal elements named the transition metals. It is also part of the platinum group. Ruthenium is found in platinum ores.",
     "local_bohr_model_3d": "/assets/elements/Ru/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ru/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ru/bohr_image.png",
+    "fun_fact": "Apparently, Jedrzej Sniadecki, a Polish chemist, had produced ruthenium first but he withdrew his claim of discovery after other scientists failed to replicate his results."
   },
   {
     "number": 45,
@@ -2799,7 +2843,8 @@
     "group_name": "Group 9",
     "summary_extended": "Rhodium is a chemical element. It has the chemical symbol Rh. It has the atomic number 45. It is a rare metal. It is silver white and hard. In chemistry it is placed in a group of metal elements named the transition metals. It is also part of the platinum group. Rhodium is found in platinum ores.",
     "local_bohr_model_3d": "/assets/elements/Rh/model.glb",
-    "local_bohr_model_image": "/assets/elements/Rh/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Rh/bohr_image.png",
+    "fun_fact": "Rhodium is resistant to most acids."
   },
   {
     "number": 46,
@@ -2851,7 +2896,8 @@
     "group_name": "Group 10",
     "summary_extended": "Palladium is a chemical element. It has the chemical symbol Pd. It has the atomic number 46. It is a noble metal. It is silver white. In chemistry it is placed in a group of metal elements named the transition metals. It is also part of the platinum group.",
     "local_bohr_model_3d": "/assets/elements/Pd/model.glb",
-    "local_bohr_model_image": "/assets/elements/Pd/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Pd/bohr_image.png",
+    "fun_fact": "Palladium chloride was at one time prescribed as a tuberculosis treatment. This treatment had many negative side-effects, and was later replaced by more effective drugs."
   },
   {
     "number": 47,
@@ -2904,7 +2950,8 @@
     "group_name": "Coinage Metals (Group 11)",
     "summary_extended": "Silver is a chemical element. In chemistry, silver is element 47, a transition metal. It has an atomic weight of 107.86 a.m.u. Its symbol is Ag, from the Latin word for silver, argentum.",
     "local_bohr_model_3d": "/assets/elements/Ag/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ag/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ag/bohr_image.png",
+    "fun_fact": "Silver exhibits the highest electrical conductivity, thermal conductivity, and reflectivity of any metal."
   },
   {
     "number": 48,
@@ -2958,7 +3005,8 @@
     "group_name": "Group 12",
     "summary_extended": "Cadmium is a metal. It is element 48 on the periodic table. Its symbol is Cd. Its atomic number is 48 and its atomic mass is 112.4. It is found in Group 12 on the periodic table.",
     "local_bohr_model_3d": "/assets/elements/Cd/model.glb",
-    "local_bohr_model_image": "/assets/elements/Cd/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Cd/bohr_image.png",
+    "fun_fact": "Cadmium compounds are used as red, orange and yellow pigments. A cadmium yellow paint was frequently used on Bob Ross' TV show The Joy of Painting."
   },
   {
     "number": 49,
@@ -3013,7 +3061,8 @@
     "group_name": "Boron Group (Group 13)",
     "summary_extended": "Indium is a chemical element. It has the chemical symbol In. It has the atomic number 49. It is a rare metal which is soft, malleable, and poor (post-transition). Indium looks like zinc. Pieces of indium can easily be joined by pushing one piece into another. The chemistry of indium is quite like aluminium or gallium. Zinc ores are the main source of indium.",
     "local_bohr_model_3d": "/assets/elements/In/model.glb",
-    "local_bohr_model_image": "/assets/elements/In/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/In/bohr_image.png",
+    "fun_fact": "Indium make crackling sound when bent, it's similar to \"tin cry\"."
   },
   {
     "number": 50,
@@ -3068,7 +3117,8 @@
     "group_name": "Carbon Group (Group 14)",
     "summary_extended": "Tin is a chemical element with symbol Sn and atomic number 50. It is in Group 14 on the periodic table. It has ten isotopes that are not radioactive, which is more than any other element.",
     "local_bohr_model_3d": "/assets/elements/Sn/model.glb",
-    "local_bohr_model_image": "/assets/elements/Sn/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Sn/bohr_image.png",
+    "fun_fact": "Tin cry is the characteristic sound heard when a bar made of tin is bent. Variously described as a \"screaming\" or \"crackling\" sound, the effect is caused by the crystal twinning in the metal."
   },
   {
     "number": 51,
@@ -3124,7 +3174,8 @@
     "group_name": "Pnictogens (Group 15)",
     "summary_extended": "Antimony is a chemical element. It has the chemical symbol Sb. The symbol Sb is from the Latin word stibium, meaning stibnite. It has the atomic number 51. Its atomic mass is 121.8. It is a blue-gray element that is somewhat toxic.",
     "local_bohr_model_3d": "/assets/elements/Sb/model.glb",
-    "local_bohr_model_image": "/assets/elements/Sb/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Sb/bohr_image.png",
+    "fun_fact": "Antimony(III) sulfide, Sb2S3, was recognized in predynastic Egypt as an eye cosmetic (kohl) as early as about 3100 BC, when the cosmetic palette was invented."
   },
   {
     "number": 52,
@@ -3181,7 +3232,8 @@
     "group_name": "Chalcogens (Group 16)",
     "summary_extended": "Tellurium is a chemical element. It has the chemical symbol Te and the atomic number 52. It has 52 protons and 52 electrons. Its mass number is 127.6. It has 8 natural isotopes. 4 are stable and 4 are radioactive. One of the radioactive ones lasts longer than any other isotope. It has a half life of 2.2 x 1024 years (2.2 septillion years).",
     "local_bohr_model_3d": "/assets/elements/Te/model.glb",
-    "local_bohr_model_image": "/assets/elements/Te/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Te/bohr_image.png",
+    "fun_fact": "Tellurium compounds are used as pigments for ceramics."
   },
   {
     "number": 53,
@@ -3234,7 +3286,8 @@
     "group_name": "Halogens (Group 17)",
     "summary_extended": "Iodine is a chemical element. Its atomic number is 53, and its atomic mass is 127. It is part of the Group 7 (halogens) on the periodic table of elements and its electronic configuration is 2,8,18,18,7. It is a nonmetal.",
     "local_bohr_model_3d": "/assets/elements/I/model.glb",
-    "local_bohr_model_image": "/assets/elements/I/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/I/bohr_image.png",
+    "fun_fact": "Iodine was discovered by accident. In 1811 chemist Bernard Courtois used too much of sulfuric acid in procces of extracting saltpeter from seaweed. Violet vapor appeared and condesed to black crystals which he called \"substance X\"."
   },
   {
     "number": 54,
@@ -3288,7 +3341,8 @@
     "summary_extended": "Xenon is a non-metal chemical element. It has the chemical symbol Xe and atomic number 54. As a noble gas, it is one of the few elements that are a gas at the standard temperature and pressure.",
     "local_bohr_model_3d": "/assets/elements/Xe/model.glb",
     "local_bohr_model_image": "/assets/elements/Xe/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Xe/spectral.jpg"
+    "local_spectral_img": "/assets/elements/Xe/spectral.jpg",
+    "fun_fact": "In the 1930s, American engineer Harold Edgerton started to work on strobe lamp technology for high speed photography. Soon he invented the xenon flash lamp in which light is generated by passing brief electric current through a tube filled with xenon gas.\\n"
   },
   {
     "number": 55,
@@ -3396,7 +3450,8 @@
     "group_name": "Alkaline Earth Metals (Group 2)",
     "summary_extended": "Barium is chemical element 56 on the periodic table. Its symbol is Ba. It contains 56 protons and 56 electrons. Its mass number is about 137.3. It is a metal.",
     "local_bohr_model_3d": "/assets/elements/Ba/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ba/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ba/bohr_image.png",
+    "fun_fact": "Alchemists were attracted to stones made of impure barium sulfate because after exposure to light they would glow for years."
   },
   {
     "number": 57,
@@ -3452,7 +3507,8 @@
     "group_name": "Group 3",
     "summary_extended": "Lanthanum is a chemical element. It has the chemical symbol La. It has the atomic number 57. It is part of a group of chemical elements in the periodic table named the lanthanides. It is a rare earth element. It is silvery white, malleable and ductile. It is soft and can be cut with a knife.",
     "local_bohr_model_3d": "/assets/elements/La/model.glb",
-    "local_bohr_model_image": "/assets/elements/La/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/La/bohr_image.png",
+    "fun_fact": "The first historical application of lanthanum was in gas lantern mantles."
   },
   {
     "number": 58,
@@ -3509,7 +3565,8 @@
     "group_name": "Group 3",
     "summary_extended": "Cerium is a chemical element with an atomic number of 58. This means that the nucleus of cerium has 58 protons in it. The atomic mass of cerium is 140.12. The chemical symbol of cerium is Ce and it is a member of the lanthanide group.",
     "local_bohr_model_3d": "/assets/elements/Ce/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ce/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ce/bohr_image.png",
+    "fun_fact": "It is used in the walls of self-cleaning ovens."
   },
   {
     "number": 59,
@@ -3565,7 +3622,8 @@
     "group_name": "Group 3",
     "summary_extended": "Praseodymium is a chemical element that has the symbol Pr on the periodic table. It has the atomic number 59 which means it has 59 protons in an atom. It is a soft silvery metal that can be used to make yellow-green salts. It is mixed with magnesium to produce strong metal used in aircraft engines. It can also be used to color green glass, and is in electrodes in lights. Praseodymium was first isolated in 1885 by the Austrian chemist Carl Auer von Welsbach. It is found in sands, called monazite sands, of Florida, California, India, and Brazil.",
     "local_bohr_model_3d": "/assets/elements/Pr/model.glb",
-    "local_bohr_model_image": "/assets/elements/Pr/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Pr/bohr_image.png",
+    "fun_fact": "Praseodymium is used for wind turbines."
   },
   {
     "number": 60,
@@ -3620,7 +3678,8 @@
     "group_name": "Group 3",
     "summary_extended": "Neodymium is a chemical element that has the symbol Nd on the periodic table. It has the atomic number 60 which means it has 60 protons in an atom. Neodymium can be combined with other elements like iron and boron to create the very strong neodymium magnet, these magnets can lift up to 1000 times their own weight. Neodymium is a metal that forms a coating of oxide around itself when it is placed in air. It is usually used as neodymium magnets for hard disk drives.",
     "local_bohr_model_3d": "/assets/elements/Nd/model.glb",
-    "local_bohr_model_image": "/assets/elements/Nd/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Nd/bohr_image.png",
+    "fun_fact": "Neodymium compounds were first commercially used as glass dyes in 1927, and they remain a popular additive in glasses."
   },
   {
     "number": 61,
@@ -3675,7 +3734,8 @@
     "group_name": "Group 3",
     "summary_extended": "Promethium is a synthetic radioactive chemical element that has the symbol Pm on the periodic table. It has the atomic number 61 which means it has 61 protons in its atom. It is the only synthetic element in the Lanthanide group as all its isotopes are radioactive. Together with Technetium, these are the only two radioactive elements below lead. Most Promethium is artificially produced. The longest-living isotope of promethium is 145Pm, with a half-life of 17.7 years.",
     "local_bohr_model_3d": "/assets/elements/Pm/model.glb",
-    "local_bohr_model_image": "/assets/elements/Pm/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Pm/bohr_image.png",
+    "fun_fact": "Promethium is used in atomic batteries. These batteries have a useful lifetime of about five years."
   },
   {
     "number": 62,
@@ -3730,7 +3790,8 @@
     "group_name": "Group 3",
     "summary_extended": "Samarium is a chemical element that has the symbol Sm on the periodic table. It has the atomic number 62 which means it has 62 protons in an atom.\n",
     "local_bohr_model_3d": "/assets/elements/Sm/model.glb",
-    "local_bohr_model_image": "/assets/elements/Sm/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Sm/bohr_image.png",
+    "fun_fact": "The major commercial application of samarium is in samarium–cobalt magnets, which have permanent magnetization second only to neodymium magnets. These magnets are found in small motors, headphones, and high-end magnetic pickups for guitars and related musical instruments."
   },
   {
     "number": 63,
@@ -3785,7 +3846,8 @@
     "group_name": "Group 3",
     "summary_extended": "Europium is a chemical element. It has the symbol Eu on the periodic table. It has an atomic number 63 which means it has 63 protons in one atom. It was named after the continent Europe. Its compounds can fluoresce, or glow under ultraviolet light.It costs $6700/KG. In the periodic table it stands next to samarium and gadolinium.",
     "local_bohr_model_3d": "/assets/elements/Eu/model.glb",
-    "local_bohr_model_image": "/assets/elements/Eu/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Eu/bohr_image.png",
+    "fun_fact": "Europium becomes a superconductor when it is cooled below 1.8 K and compressed to above 80 GPa. "
   },
   {
     "number": 64,
@@ -3840,7 +3902,8 @@
     "group_name": "Group 3",
     "summary_extended": "Gadolinium is a chemical element. It has the chemical symbol Gd. It has the atomic number 64. It is part of a group of chemical elements in the periodic table named the Lanthanides. It is a rare earth element. It is silvery white, malleable and ductile.",
     "local_bohr_model_3d": "/assets/elements/Gd/model.glb",
-    "local_bohr_model_image": "/assets/elements/Gd/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Gd/bohr_image.png",
+    "fun_fact": "Gadolinium have applications in microwave technology."
   },
   {
     "number": 65,
@@ -3895,7 +3958,8 @@
     "group_name": "Group 3",
     "summary_extended": "Terbium is a chemical element that has the symbol Tb on the periodic table. It has the atomic number 65 which means it has 65 protons in an atom. Its compounds fluoresce green in ultraviolet light. The metal can burned in air to form an oxide. It is a lanthanide and, along with yttrium, erbium, and ytterbium, is one of the four elements to be named after the town of Ytterby in Sweden, all of which are rare earth elements.",
     "local_bohr_model_3d": "/assets/elements/Tb/model.glb",
-    "local_bohr_model_image": "/assets/elements/Tb/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Tb/bohr_image.png",
+    "fun_fact": "Terbium is more common than metals such as silver and mercury."
   },
   {
     "number": 66,
@@ -3950,7 +4014,8 @@
     "group_name": "Group 3",
     "summary_extended": "Dysprosium is a chemical element with the symbol Dy and atomic number 66. It has a very high melting temperature of 1,407°C. It can also absorb neutrons. This makes it very suitable for use with nuclear reactors and lasers.",
     "local_bohr_model_3d": "/assets/elements/Dy/model.glb",
-    "local_bohr_model_image": "/assets/elements/Dy/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Dy/bohr_image.png",
+    "fun_fact": "Dysprosium is used in ships’ sonar systems."
   },
   {
     "number": 67,
@@ -4005,7 +4070,8 @@
     "group_name": "Group 3",
     "summary_extended": "Holmium is a chemical element with the symbol Ho and atomic number 67. Part of the lanthanide series, holmium is a relatively soft and malleable silvery-white metallic element, which is stable in dry air at room temperature. A rare earth metal, it is found in the minerals monazite and gadolinite.",
     "local_bohr_model_3d": "/assets/elements/Ho/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ho/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ho/bohr_image.png",
+    "fun_fact": "Holmium has unusual magnetic properties."
   },
   {
     "number": 68,
@@ -4060,7 +4126,8 @@
     "group_name": "Group 3",
     "summary_extended": "Erbium is an element on the periodic table. Its symbol is Er. Its atomic number is 68 which means it has 68 protons in an atom. It is a lanthanide and, along with yttrium, terbium, and ytterbium, is one of the four elements to be named after the town of Ytterby in Sweden, all of which are rare earth elements.",
     "local_bohr_model_3d": "/assets/elements/Er/model.glb",
-    "local_bohr_model_image": "/assets/elements/Er/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Er/bohr_image.png",
+    "fun_fact": "Erbia has a pink color and is used to color glass and glazes."
   },
   {
     "number": 69,
@@ -4115,7 +4182,8 @@
     "group_name": "Group 3",
     "summary_extended": "Thulium is a chemical element that has the symbol Tm and atomic number 69. It is a lanthanide element.",
     "local_bohr_model_3d": "/assets/elements/Tm/model.glb",
-    "local_bohr_model_image": "/assets/elements/Tm/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Tm/bohr_image.png",
+    "fun_fact": "Thulium is put into euro banknotes as a measure against counterfeiting."
   },
   {
     "number": 70,
@@ -4170,7 +4238,8 @@
     "group_name": "Group 3",
     "summary_extended": "Ytterbium is a chemical element. It has the chemical symbol Yb. It has the atomic number 70 which means it has 70 protons in an atom. It is part of a group of chemical elements in the periodic table named the Lanthanides. Ytterbium, along with yttrium, terbium, and erbium, is one of the four elements to be named after the town of Ytterby in Sweden, all of which are rare earth elements. It is soft and silver in color.",
     "local_bohr_model_3d": "/assets/elements/Yb/model.glb",
-    "local_bohr_model_image": "/assets/elements/Yb/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Yb/bohr_image.png",
+    "fun_fact": "Ytterbium has no biological role."
   },
   {
     "number": 71,
@@ -4226,7 +4295,8 @@
     "group_name": "Group 3",
     "summary_extended": "Lutetium is a chemical element. It has the chemical symbol Lu. It has the atomic number 71. It is a metal and a rare earth element. It is silver white. In chemistry it is placed in a group of metal elements named the transition metals. Lutetium can also be grouped with the lanthanides because it is near the lanthanides in the Periodic Table. Its physical properties are like the lanthanides.",
     "local_bohr_model_3d": "/assets/elements/Lu/model.glb",
-    "local_bohr_model_image": "/assets/elements/Lu/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Lu/bohr_image.png",
+    "fun_fact": "Lutetium is the most expensive element."
   },
   {
     "number": 72,
@@ -4282,7 +4352,8 @@
     "summary_extended": "Hafnium is a chemical element. It has the chemical symbol Hf. It has the atomic number 72. It is a metal. It is silver gray. In chemistry it is placed in a group of metal elements named the transition metals. The chemistry of hafnium is similar to zirconium.",
     "local_bohr_model_3d": "/assets/elements/Hf/model.glb",
     "local_bohr_model_image": "/assets/elements/Hf/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Hf/spectral.png"
+    "local_spectral_img": "/assets/elements/Hf/spectral.png",
+    "fun_fact": "Most of the hafnium produced is used in the manufacture of control rods for nuclear reactors."
   },
   {
     "number": 73,
@@ -4336,7 +4407,8 @@
     "summary_extended": "Tantalum is a chemical element. Tantalum was named tantalium. It has the chemical symbol Ta. It has the atomic number 73. It is a rare metal. It is hard and blue-gray. In chemistry it is placed in a group of metal elements named the transition metals.",
     "local_bohr_model_3d": "/assets/elements/Ta/model.glb",
     "local_bohr_model_image": "/assets/elements/Ta/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Ta/spectral.png"
+    "local_spectral_img": "/assets/elements/Ta/spectral.png",
+    "fun_fact": "Tantalum is widely used in making surgical instruments and implants because it resists attack by body fluids and is nonirritating."
   },
   {
     "number": 74,
@@ -4389,7 +4461,8 @@
     "group_name": "Group 6",
     "summary_extended": "Tungsten is a chemical element on the periodic table. It has the chemical symbol W and it has the atomic number 74. It is a steel-gray to white colored metal. Tungsten’s electron shell formula is: 2, 8, 18, 32, 12, 2. In chemistry, it is placed in a group of metal elements named the transition metals. Tungsten is found in several ores, including wolframite and scheelite.",
     "local_bohr_model_3d": "/assets/elements/W/model.glb",
-    "local_bohr_model_image": "/assets/elements/W/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/W/bohr_image.png",
+    "fun_fact": "Tungsten's alloys have numerous applications, including incandescent light bulb filaments."
   },
   {
     "number": 75,
@@ -4444,7 +4517,8 @@
     "group_name": "Group 7",
     "summary_extended": "Rhenium is a chemical element. It has the chemical symbol Re. It has the atomic number 75. It is a rare noble metal. It is silver white. In chemistry it is placed in a group of metal elements called the transition metals. The chemistry of rhenium is similar to manganese. Discovered in 1908, rhenium was the second-last stable element to be discovered. It was named after the river Rhine in Europe.",
     "local_bohr_model_3d": "/assets/elements/Re/model.glb",
-    "local_bohr_model_image": "/assets/elements/Re/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Re/bohr_image.png",
+    "fun_fact": "Rhenium is added to high-temperature superalloys that are used to make jet engine parts."
   },
   {
     "number": 76,
@@ -4497,7 +4571,8 @@
     "group_name": "Group 8",
     "summary_extended": "Osmium is a chemical element. It is element number 76 on the periodic table. Its symbol is Os.",
     "local_bohr_model_3d": "/assets/elements/Os/model.glb",
-    "local_bohr_model_image": "/assets/elements/Os/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Os/bohr_image.png",
+    "fun_fact": "Osmium tetroxide has been used in fingerprint detection and in staining fatty tissue for optical and electron microscopy."
   },
   {
     "number": 77,
@@ -4550,7 +4625,8 @@
     "group_name": "Group 9",
     "summary_extended": "Iridium is the 77th element on the periodic table. Its symbol is Ir and its atomic number is 77.",
     "local_bohr_model_3d": "/assets/elements/Ir/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ir/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ir/bohr_image.png",
+    "fun_fact": "In February 2019, medical scientists announced that iridium attached to albumin, creating a photosensitized molecule, can penetrate cancer cells and, after being irradiated with light (a process called photodynamic therapy), destroy the cancer cells."
   },
   {
     "number": 78,
@@ -4603,7 +4679,8 @@
     "group_name": "Group 10",
     "summary_extended": "Platinum is a chemical element. It has symbol Pt and atomic number 78. Platinum is a soft, heavy, white metal. It is a precious metal and a transition metal. Its name comes from the Spanish word platina meaning \"little silver\".",
     "local_bohr_model_3d": "/assets/elements/Pt/model.glb",
-    "local_bohr_model_image": "/assets/elements/Pt/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Pt/bohr_image.png",
+    "fun_fact": "Platinum-cobalt, an alloy of roughly three parts platinum and one part cobalt, is used to make relatively strong permanent magnets."
   },
   {
     "number": 79,
@@ -4656,7 +4733,8 @@
     "group_name": "Coinage Metals (Group 11)",
     "summary_extended": "Gold is a soft, dense, bright yellow metal. It is a chemical element. Its chemical symbol is Au. Its atomic number is 79. As a precious metal, it has been used for many thousands of years by people all over the world, for jewelry, and as money. It is easy to shape. This means, it can be hammered into sheets or stretched into wires without breaking. Chemically, gold is a noble metal. This means it barely reacts with anything. Only platinum is less reactive.",
     "local_bohr_model_3d": "/assets/elements/Au/model.glb",
-    "local_bohr_model_image": "/assets/elements/Au/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Au/bohr_image.png",
+    "fun_fact": "Gold was one of the first pure metals to be used by humans."
   },
   {
     "number": 80,
@@ -4710,7 +4788,8 @@
     "group_name": "Group 12",
     "summary_extended": "Mercury may mean:Mercury (mythology), the Roman god\nMercury (planet), the first planet from the Sun in our solar system\nMercury (element), the chemical element or atom\nProject Mercury, the first human spaceflight program by the United States' NASA\nMercury, a programming language\nMercury automobile, a make of car owned by the Ford Motor Company\nMercury, France, a local government in the Savoie département of France\n\nBristol Mercury, a 9-cylinder aircraft engine\nFreddie Mercury, a singer of the group Queen\nSymphony No. 43 (Haydn), a piece of music sometimes called Mercury\n",
     "local_bohr_model_3d": "/assets/elements/Hg/model.glb",
-    "local_bohr_model_image": "/assets/elements/Hg/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Hg/bohr_image.png",
+    "fun_fact": "Mercury is one of the few elements that is liquid at room temperature."
   },
   {
     "number": 81,
@@ -4764,7 +4843,8 @@
     "group_name": "Boron Group (Group 13)",
     "summary_extended": "Thallium is at chemical element, it has symbol Tl and atomic number 81. Its standard atomic weight is 204.4. It is found in Group 15 of the periodic table. Thallium is a soft, heavy and gray metal, but can look red due to oxidation. Thallium and its compounds are extremely toxic, even more than cyanide and arsenic.",
     "local_bohr_model_3d": "/assets/elements/Tl/model.glb",
-    "local_bohr_model_image": "/assets/elements/Tl/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Tl/bohr_image.png",
+    "fun_fact": "Agatha Christie used thallium as the agent of murder in her detective fiction novel \"The Pale Horse\"."
   },
   {
     "number": 82,
@@ -4820,7 +4900,8 @@
     "group_name": "Carbon Group (Group 14)",
     "summary_extended": "Lead is a chemical element. Its chemical symbol is Pb, which comes from plumbum, the Latin word for lead. Its atomic number is 82, atomic mass is 207.2 and has a melting point of 327.8°C. It is a very poisonous and heavy metal, and is also the ending element to the stable elements, although the next element, bismuth, is so weakly radioactive that it can be considered stable for practical purposes.",
     "local_bohr_model_3d": "/assets/elements/Pb/model.glb",
-    "local_bohr_model_image": "/assets/elements/Pb/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Pb/bohr_image.png",
+    "fun_fact": "Because it's fairly easy to extract (for a metal), lead has been used since prehistoric time."
   },
   {
     "number": 83,
@@ -4877,7 +4958,8 @@
     "group_name": "Pnictogens (Group 15)",
     "summary_extended": "Bismuth is a chemical element. It is element 83 on the periodic table and its symbol is Bi. Its atomic mass is 209. It is only slightly radioactive. The radioactivity is minimal so it is typically seen as nonradioactive. Bismuth is only naturally found as one isotope, which is the almost nonradioactive one. Its radioactivity was predicted by scientists and proven by analyzing the metal. It is in Group 15 on the periodic table.",
     "local_bohr_model_3d": "/assets/elements/Bi/model.glb",
-    "local_bohr_model_image": "/assets/elements/Bi/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Bi/bohr_image.png",
+    "fun_fact": "The spiral, stair-stepped structure of bismuth crystals is the result of a higher growth rate around the outside edges than on the inside edges. The variations in the thickness of the oxide layer that forms on the surface of the crystal cause different wavelengths of light to interfere upon reflection, thus displaying a rainbow of colors. "
   },
   {
     "number": 84,
@@ -4930,7 +5012,8 @@
     "group_name": "Chalcogens (Group 16)",
     "summary_extended": "Polonium is a rare radioactive metalloid. It is chemical element 84 on the periodic table and its symbol is Po. It was discovered in 1898 by Marie and Pierre Curie.",
     "local_bohr_model_3d": "/assets/elements/Po/model.glb",
-    "local_bohr_model_image": "/assets/elements/Po/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Po/bohr_image.png",
+    "fun_fact": "Polonium is found in the food chain, especially in seafood."
   },
   {
     "number": 85,
@@ -4983,7 +5066,8 @@
     "group_name": "Halogens (Group 17)",
     "summary_extended": "Astatine is a radioactive, chemical element. Its atomic number is 85, and its atomic weight is 210. It is part of the Group 17 (halogens) on the periodic table of elements. All of astatine's isotopes are short-lived; the most stable is astatine-210, with a half-life of 8.3 hours.",
     "local_bohr_model_3d": "/assets/elements/At/model.glb",
-    "local_bohr_model_image": "/assets/elements/At/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/At/bohr_image.png",
+    "fun_fact": "Some properties of Astatine are still not known, for example its color."
   },
   {
     "number": 86,
@@ -5037,7 +5121,8 @@
     "summary_extended": "Radon is a chemical element in the periodic table. It is element 86 on the periodic table and its symbol is Rn. It is an odorless, tasteless noble gas. It is quite radioactive and can decay very quickly. 27 isotopes of Radon are known today. The most stable of them has a half life of about 3.8 days.",
     "local_bohr_model_3d": "/assets/elements/Rn/model.glb",
     "local_bohr_model_image": "/assets/elements/Rn/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Rn/spectral.png"
+    "local_spectral_img": "/assets/elements/Rn/spectral.png",
+    "fun_fact": "Radon can also occur in some ground water like spring waters and hot springs."
   },
   {
     "number": 87,
@@ -5091,7 +5176,8 @@
     "group_name": "Alkali Metals (Group 1)",
     "summary_extended": "Francium is a chemical element with the chemical symbol Fr and an atomic number of 87. It is a metal. In chemistry it is placed in a group of metal elements named the alkali metals. Francium is very radioactive. It is in very small amounts in uranium and thorium ores. It has the lowest electronegativity and electron affinity of all the chemical elements.",
     "local_bohr_model_3d": "/assets/elements/Fr/model.glb",
-    "local_bohr_model_image": "/assets/elements/Fr/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Fr/bohr_image.png",
+    "fun_fact": "As little as 20–30 g (one ounce) exists at any given time throughout the Earth's crust; the other isotopes (except for francium-221) are entirely synthetic."
   },
   {
     "number": 88,
@@ -5145,7 +5231,8 @@
     "group_name": "Alkaline Earth Metals (Group 2)",
     "summary_extended": "Radium is a chemical element. The symbol for radium is Ra, and its atomic number is 88. It was discovered by Marie Curie and Pierre Curie in the form of radium chloride in 1898. It is a slivery-white alkaline earth metal, but it turns black quickly when it is exposed to nitrogen in the air. All isotopes of radium are radioactive. The radioactivity of radium causes it to glow in the dark.",
     "local_bohr_model_3d": "/assets/elements/Ra/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ra/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ra/bohr_image.png",
+    "fun_fact": "Radium was formerly used in self-luminous paints for watches, nuclear panels, aircraft switches, clocks, and instrument dials."
   },
   {
     "number": 89,
@@ -5199,7 +5286,8 @@
     "group_name": "Group 3",
     "summary_extended": "Actinium is chemical element 89 on the periodic table. Its symbol is Ac. Actinium's mass is 227 g/mol.",
     "local_bohr_model_3d": "/assets/elements/Ac/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ac/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ac/bohr_image.png",
+    "fun_fact": "Actinium glows in the dark with a pale blue light, which originates from the surrounding air ionized by the emitted energetic particles."
   },
   {
     "number": 90,
@@ -5255,7 +5343,8 @@
     "group_name": "Group 3",
     "summary_extended": "Thorium is a chemical element in actinide group. It is a weakly radioactive metal. It has a shiny, silvery white color. It has the chemical symbol Th and the atomic number 90. Natural thorium has an atomic weight of 232. Thorium is named after Thor, the Norse god of thunder. Its ores are found in nature, especially in India, the United States, and Australia.",
     "local_bohr_model_3d": "/assets/elements/Th/model.glb",
-    "local_bohr_model_image": "/assets/elements/Th/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Th/bohr_image.png",
+    "fun_fact": "Thorium dioxide is found in heat-resistant ceramics, such as high-temperature laboratory crucibles."
   },
   {
     "number": 91,
@@ -5308,7 +5397,8 @@
     "group_name": "Group 3",
     "summary_extended": "Protactinium is a very radioactive chemical element with the symbol Pa and atomic number 91. The density of this element is 231.04",
     "local_bohr_model_3d": "/assets/elements/Pa/model.glb",
-    "local_bohr_model_image": "/assets/elements/Pa/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Pa/bohr_image.png",
+    "fun_fact": "Protactinium is one of the rarest and most expensive naturally occurring elements."
   },
   {
     "number": 92,
@@ -5362,7 +5452,8 @@
     "group_name": "Group 3",
     "summary_extended": "Uranium is a chemical element on the periodic table. It has an atomic number of 92, which means that a uranium atom has 92 protons in its center, the nucleus.",
     "local_bohr_model_3d": "/assets/elements/U/model.glb",
-    "local_bohr_model_image": "/assets/elements/U/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/U/bohr_image.png",
+    "fun_fact": "The main use of uranium in the civilian sector is to fuel nuclear power plants."
   },
   {
     "number": 93,
@@ -5415,7 +5506,8 @@
     "group_name": "Group 3",
     "summary_extended": "Neptunium is a chemical element that has the symbol Np on the periodic table. It has the atomic number 93 which means it has 93 protons and electrons in its atoms. It is named after the planet Neptune in the same way as Uranium is named after the planet Uranus.",
     "local_bohr_model_3d": "/assets/elements/Np/model.glb",
-    "local_bohr_model_image": "/assets/elements/Np/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Np/bohr_image.png",
+    "fun_fact": "Neptunium is used mainly for research purposes."
   },
   {
     "number": 94,
@@ -5468,7 +5560,8 @@
     "group_name": "Group 3",
     "summary_extended": "Plutonium is the chemical element with the atomic number 94 and chemical symbol Pu. It is a highly radioactive metal, and is the metal used in most nuclear weapons. The chemical element plutonium has some different isotopes. The most important isotope of plutonium is 239Pu. It takes 24,110 years for half of a sample of plutonium-239 to decay, which is called its half-life. It can be made from natural uranium. It is fissile and a nuclear fuel.",
     "local_bohr_model_3d": "/assets/elements/Pu/model.glb",
-    "local_bohr_model_image": "/assets/elements/Pu/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Pu/bohr_image.png",
+    "fun_fact": "If you were to touch a small piece of plutonium it would feel warm because of the energy released by alpha decay. A larger piece of the metal could boil water."
   },
   {
     "number": 95,
@@ -5522,7 +5615,8 @@
     "summary_extended": "Americium is a radioactive chemical element with the symbol Am and the atomic number 95. In chemistry, it is placed in a group of metal elements named the actinides. Americium is a transuranic element. Americium does not exist in nature and has to be made by people. It has a silver color. Americium is made by bombarding a plutonium target with neutrons.",
     "local_bohr_model_3d": "/assets/elements/Am/model.glb",
     "local_bohr_model_image": "/assets/elements/Am/bohr_image.png",
-    "local_spectral_img": "/assets/elements/Am/spectral.png"
+    "local_spectral_img": "/assets/elements/Am/spectral.png",
+    "fun_fact": "Americium is commonly used in smoke alarms."
   },
   {
     "number": 96,
@@ -5576,7 +5670,8 @@
     "group_name": "Group 3",
     "summary_extended": "Curium is a synthetic chemical element in the periodic table that has the atomic number 96. It has the chemical symbol Cm and it is a radioactive metal. In chemistry it is placed in a group of metal elements named the actinides. Curium is a transuranic element. It is a radioactive element that does not exist in nature. Curium has a silver color and it is made by bombarding a plutonium target with alpha particles. Curium was named after Marie Curie and her husband Pierre.",
     "local_bohr_model_3d": "/assets/elements/Cm/model.glb",
-    "local_bohr_model_image": "/assets/elements/Cm/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Cm/bohr_image.png",
+    "fun_fact": "Curium isotops are used in the space program as a heat source."
   },
   {
     "number": 97,
@@ -5629,7 +5724,8 @@
     "group_name": "Group 3",
     "summary_extended": "Berkelium is a synthetic, radioactive, chemical element in the periodic table that has the symbol Bk and atomic number 97. It is a metallic element and part of the actinide series. Berkelium was invented by scientists and does not exist in nature. Berkelium was first made by hitting americium with alpha particles or helium ions. It is named after Berkeley, California and the University of California, Berkeley.",
     "local_bohr_model_3d": "/assets/elements/Bk/model.glb",
-    "local_bohr_model_image": "/assets/elements/Bk/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Bk/bohr_image.png",
+    "fun_fact": "Berkelium exists in such small amounts that very little is known about its properties."
   },
   {
     "number": 98,
@@ -5682,7 +5778,8 @@
     "group_name": "Group 3",
     "summary_extended": "Californium is a chemical element. It is a radioactive metal. It has the chemical symbol Cf. It has the atomic number 98. Californium is a transuranium element. Californium does not have many uses. It was discovered by bombarding a curium target with alpha particles. Californium is named after the US State of California, where it was discovered, in the University of Berkeley.",
     "local_bohr_model_3d": "/assets/elements/Cf/model.glb",
-    "local_bohr_model_image": "/assets/elements/Cf/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Cf/bohr_image.png",
+    "fun_fact": "Californium is easily cut with a razor-blade."
   },
   {
     "number": 99,
@@ -5735,7 +5832,8 @@
     "group_name": "Group 3",
     "summary_extended": "Einsteinium is a chemical element with the atomic number 99 it is a synthetic element, so all isotopes are radioactive.",
     "local_bohr_model_3d": "/assets/elements/Es/model.glb",
-    "local_bohr_model_image": "/assets/elements/Es/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Es/bohr_image.png",
+    "fun_fact": "Scientists know too little about einsteinium, however, it does pose a threat to human health."
   },
   {
     "number": 100,
@@ -5788,7 +5886,8 @@
     "group_name": "Group 3",
     "summary_extended": "Fermium is a chemical element. It has an atomic number of 100, which makes it at position 100 at the periodic table. Fermium cannot be found in nature; it has to be made. Scientists can create it by combining plutonium with neutrons at very high speeds and temperatures. It is named after Enrico Fermi.",
     "local_bohr_model_3d": "/assets/elements/Fm/model.glb",
-    "local_bohr_model_image": "/assets/elements/Fm/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Fm/bohr_image.png",
+    "fun_fact": "Fermium was first discovered in the fallout from the 'Ivy Mike' nuclear test ."
   },
   {
     "number": 101,
@@ -5842,7 +5941,8 @@
     "group_name": "Group 3",
     "summary_extended": "Mendelevium ) is a synthetic element with the symbol Md and the atomic number 101. It is a metallic radioactive transuranic element of the actinides.",
     "local_bohr_model_3d": "/assets/elements/Md/model.glb",
-    "local_bohr_model_image": "/assets/elements/Md/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Md/bohr_image.png",
+    "fun_fact": "Mendelevium was discovered by bombarding einsteinium with alpha particles in 1955, the same method still used to produce it today."
   },
   {
     "number": 102,
@@ -5896,7 +5996,8 @@
     "group_name": "Group 3",
     "summary_extended": "Nobelium is a synthetic element with the symbol No and atomic number 102.",
     "local_bohr_model_3d": "/assets/elements/No/model.glb",
-    "local_bohr_model_image": "/assets/elements/No/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/No/bohr_image.png",
+    "fun_fact": "Like all elements with atomic number over 100, nobelium can only be produced in particle accelerators by bombarding lighter elements with charged particles."
   },
   {
     "number": 103,
@@ -5950,7 +6051,8 @@
     "group_name": "Group 3",
     "summary_extended": "Lawrencium is a chemical element. Before being officially named, it was known as eka-lutetium and unniltrium. It has the symbol Lr. It has the atomic number 103. It is a group 3 element and transition metal, but is also often counted as an actinide.",
     "local_bohr_model_3d": "/assets/elements/Lr/model.glb",
-    "local_bohr_model_image": "/assets/elements/Lr/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Lr/bohr_image.png",
+    "fun_fact": "Chemistry experiments have confirmed that lawrencium behaves as a heavier homolog to lutetium in the periodic table, and is a trivalent element. "
   },
   {
     "number": 104,
@@ -6004,7 +6106,8 @@
     "group_name": "Group 4",
     "summary_extended": "Rutherfordium is a chemical element. It has also been named eka-hafnium and unnilquadium. It has the symbol Rf and has the atomic number 104. It is a very radioactive element that does not exist in nature. It has to be made. Rutherfordium is the first transactinide element.. The isotope that has the longest half-life is 265Rf. Rutherfordium-265 only has a half life of about 13 hours.",
     "local_bohr_model_3d": "/assets/elements/Rf/model.glb",
-    "local_bohr_model_image": "/assets/elements/Rf/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Rf/bohr_image.png",
+    "fun_fact": "As a synthetic element, it is not found in nature and can only be created in a laboratory. "
   },
   {
     "number": 105,
@@ -6056,7 +6159,8 @@
     "group_name": "Group 5",
     "summary_extended": "Dubnium is a chemical element. It has the symbol Db and it has the atomic number 105. It is a very radioactive element that does not exist in nature. It has to be made in a lab. It is a transuranium element created by bombarding californium-249 with nitrogen-15 nuclei. The isotope that has the longest half-life only has a half life of 32 hours. Dubnium is a transactinide element.",
     "local_bohr_model_3d": "/assets/elements/Db/model.glb",
-    "local_bohr_model_image": "/assets/elements/Db/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Db/bohr_image.png",
+    "fun_fact": "Dubnium does not occur naturally on Earth and is produced artificially."
   },
   {
     "number": 106,
@@ -6108,7 +6212,8 @@
     "group_name": "Group 6",
     "summary_extended": "Seaborgium is a chemical element. In the past, it has been named eka-tungsten but is now named seaborgium. It has the symbol Sg and it has the atomic number 106. Seaborgium is a radioactive element that does not exist in nature. It has to be made. The most stable isotope is 271Sg. Seaborgium-271 has a half-life of 2.4 minutes.",
     "local_bohr_model_3d": "/assets/elements/Sg/model.glb",
-    "local_bohr_model_image": "/assets/elements/Sg/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Sg/bohr_image.png",
+    "fun_fact": "Seaborgium as a synthetic element, it can be created in a laboratory but is not found in nature."
   },
   {
     "number": 107,
@@ -6160,7 +6265,8 @@
     "group_name": "Group 7",
     "summary_extended": "Bohrium is a chemical element. At the periodic table of the elements it is at position 107.",
     "local_bohr_model_3d": "/assets/elements/Bh/model.glb",
-    "local_bohr_model_image": "/assets/elements/Bh/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Bh/bohr_image.png",
+    "fun_fact": "The most stable known isotope of bohrium is 270Bh with a half-life of approximately 61 seconds, though the unconfirmed 278Bh may have a longer half-life of about 690 seconds."
   },
   {
     "number": 108,
@@ -6212,7 +6318,8 @@
     "group_name": "Group 8",
     "summary_extended": "Hassium is a very radioactive and unstable chemical element. It has the symbol Hs and it has the atomic number 108. It is a superheavy transuranium element.",
     "local_bohr_model_3d": "/assets/elements/Hs/model.glb",
-    "local_bohr_model_image": "/assets/elements/Hs/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Hs/bohr_image.png",
+    "fun_fact": "Hassium is produced artificially and only small amounts have been made."
   },
   {
     "number": 109,
@@ -6264,7 +6371,8 @@
     "group_name": "Group 9",
     "summary_extended": "Meitnerium is a chemical element in the periodic table. Its atomic number is 109. It is not found on earth naturally. Because of this, it needs to be made in a science laboratory. Its half life, or the amount of time it takes for half of the element to go away is a little over one second. Meitnerium was first made in 1982.",
     "local_bohr_model_3d": "/assets/elements/Mt/model.glb",
-    "local_bohr_model_image": "/assets/elements/Mt/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Mt/bohr_image.png",
+    "fun_fact": "No properties of meitnerium or its compounds have been measured; this is due to its extremely limited and expensive production"
   },
   {
     "number": 110,
@@ -6316,7 +6424,8 @@
     "group_name": "Group 10",
     "summary_extended": "Darmstadtium is a chemical element. It has been named ununnilium (Uun) or eka-platinum but is now named darmstadtium. It has the symbol Ds. It has the atomic number 110. It is a transuranium element.",
     "local_bohr_model_3d": "/assets/elements/Ds/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ds/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ds/bohr_image.png",
+    "fun_fact": "Boiling Point and Melting Point for darmstadtium are unknown."
   },
   {
     "number": 111,
@@ -6368,7 +6477,8 @@
     "group_name": "Coinage Metals (Group 11)",
     "summary_extended": "Roentgenium is a chemical element. It is a transition metal. Its symbol is Rg, and its atomic number is 111.",
     "local_bohr_model_3d": "/assets/elements/Rg/model.glb",
-    "local_bohr_model_image": "/assets/elements/Rg/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Rg/bohr_image.png",
+    "fun_fact": "No one knows for sure what roentgenium looks like."
   },
   {
     "number": 112,
@@ -6420,7 +6530,8 @@
     "group_name": "Group 12",
     "summary_extended": "Copernicium is a chemical element in the Periodic Table. It is also named eka-mercury. It has the symbol Cn. It has the atomic number 112. It is a transuranium element.",
     "local_bohr_model_3d": "/assets/elements/Cn/model.glb",
-    "local_bohr_model_image": "/assets/elements/Cn/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Cn/bohr_image.png",
+    "fun_fact": "The most stable known isotope, 285Cn, has a half-life of 29 seconds."
   },
   {
     "number": 113,
@@ -6472,7 +6583,8 @@
     "group_name": "Boron Group (Group 13)",
     "summary_extended": "Nihonium (ニホニウム) is a chemical element. It is also named eka-thallium. It has the symbol Nh. It has the atomic number 113. It is a transuranium element. The name \"nihonium\" comes from the name of Japan in Japanese, 日本 (nihon).",
     "local_bohr_model_3d": "/assets/elements/Nh/model.glb",
-    "local_bohr_model_image": "/assets/elements/Nh/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Nh/bohr_image.png",
+    "fun_fact": "All nihonium isotopes are unstable and radioactive."
   },
   {
     "number": 114,
@@ -6524,7 +6636,8 @@
     "group_name": "Carbon Group (Group 14)",
     "summary_extended": "Flerovium is a synthetic chemical element also known as eka-lead. It has the symbol Fl and has the atomic number 114. It is a radioactive superheavy element.",
     "local_bohr_model_3d": "/assets/elements/Fl/model.glb",
-    "local_bohr_model_image": "/assets/elements/Fl/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Fl/bohr_image.png",
+    "fun_fact": "More recent results show that flerovium's reaction with gold is similar to that of copernicium, showing that it is a very volatile element that may even be gaseous at standard temperature and pressure."
   },
   {
     "number": 115,
@@ -6576,7 +6689,8 @@
     "group_name": "Pnictogens (Group 15)",
     "summary_extended": "Moscovium is a superheavy synthetic radioactive chemical element also known as eka-bismuth. It has the symbol Mc and the atomic number 115. Moscovium does not exist in nature. It is made from a fusion reaction between americium and calcium.",
     "local_bohr_model_3d": "/assets/elements/Mc/model.glb",
-    "local_bohr_model_image": "/assets/elements/Mc/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Mc/bohr_image.png",
+    "fun_fact": "Moscovium is an extremely radioactive element: its most stable known isotope, moscovium-290, has a half-life of only 0.65 seconds."
   },
   {
     "number": 116,
@@ -6628,7 +6742,8 @@
     "group_name": "Chalcogens (Group 16)",
     "summary_extended": "Livermorium is a radioactive chemical element that has the chemical symbol Lv and the atomic number 116. Its longest half-life lasts only 47 milliseconds. \nThe element is named in honor of the Lawrence Livermore National Laboratory.",
     "local_bohr_model_3d": "/assets/elements/Lv/model.glb",
-    "local_bohr_model_image": "/assets/elements/Lv/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Lv/bohr_image.png",
+    "fun_fact": "Livermorium is produced by bombarding Curium with Calcium."
   },
   {
     "number": 117,
@@ -6680,7 +6795,8 @@
     "group_name": "Halogens (Group 17)",
     "summary_extended": "Tennessine is a radioactive superheavy man-made chemical element. It has a symbol Ts and atomic number of 117. It is the second heaviest element of all, and is the second to last element. It is in group 17 in the periodic table, where the halogens are. Its properties are not yet fully known but it is probably a metalloid. The discovery of tennessine was announced in 2010 by scientists in Russia and the United States. They collaborated and it is the most recently discovered element as of 2019. It is named after the state of Tennessee and it has no uses except research.",
     "local_bohr_model_3d": "/assets/elements/Ts/model.glb",
-    "local_bohr_model_image": "/assets/elements/Ts/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Ts/bohr_image.png",
+    "fun_fact": "In 2016, the element was formally added to the periodic table."
   },
   {
     "number": 118,
@@ -6732,7 +6848,8 @@
     "group_name": "Noble Gases (Group 18)",
     "summary_extended": "Oganesson is a synthetic chemical element with symbol Og and atomic number 118. Oganesson has the highest atomic number and highest atomic mass of all known elements to date. The radioactive oganesson atom is very unstable, and since 2005, only five atoms of the isotope Oganesson-294 have been created.",
     "local_bohr_model_3d": "/assets/elements/Og/model.glb",
-    "local_bohr_model_image": "/assets/elements/Og/bohr_image.png"
+    "local_bohr_model_image": "/assets/elements/Og/bohr_image.png",
+    "fun_fact": "Since 2005, only few (five possibly six) atoms of oganesson have been produced"
   },
   {
     "number": 119,

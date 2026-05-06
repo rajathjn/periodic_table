@@ -44,4 +44,5 @@ export interface Element {
   local_bohr_model_3d?: string;
   oxidation_states: string;
   group_name: string | null;
+  fun_fact?: string;
 }
