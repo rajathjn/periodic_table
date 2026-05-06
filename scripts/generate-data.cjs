@@ -1,28 +1,25 @@
-// Script to fetch Bowserinator JSON and enhance it with additional data
+/**
+ * generate-data.cjs
+ *
+ * Fetches the Bowserinator Periodic Table JSON from GitHub and transforms it
+ * into the format used by the application. Adds normalized categories, group
+ * names, and common oxidation states.
+ *
+ * Output: src/data/elements.json
+ *
+ * Usage: node scripts/generate-data.cjs
+ */
 const fs = require('fs');
 const path = require('path');
 
 const BOWSER_URL = 'https://raw.githubusercontent.com/Bowserinator/Periodic-Table-JSON/master/PeriodicTableJSON.json';
 
-// Category color mapping for consistent UI
-const CATEGORY_COLORS = {
-  'alkali metal': '#F44336',
-  'alkaline earth metal': '#FF9800',
-  'transition metal': '#FFEB3B',
-  'post-transition metal': '#4CAF50',
-  'metalloid': '#00BCD4',
-  'diatomic nonmetal': '#2196F3',
-  'polyatomic nonmetal': '#2196F3',
-  'noble gas': '#9C27B0',
-  'lanthanide': '#FF5722',
-  'actinide': '#E91E63',
-  'unknown, probably transition metal': '#607D8B',
-  'unknown, probably post-transition metal': '#607D8B',
-  'unknown, probably metalloid': '#607D8B',
-  'unknown, predicted to be noble gas': '#607D8B',
-};
 
-// Normalize category names
+/**
+ * Normalizes the raw Bowserinator category string into a URL-friendly slug.
+ * Maps variations like "diatomic nonmetal" and "polyatomic nonmetal" to "nonmetal",
+ * and any unrecognized category to "unknown".
+ */
 function normalizeCategory(cat) {
   if (!cat) return 'unknown';
   const c = cat.toLowerCase();
@@ -38,6 +35,7 @@ function normalizeCategory(cat) {
   return 'unknown';
 }
 
+/** Returns a descriptive group name like "Halogens (Group 17)" for known groups. */
 function getGroupName(group, category) {
   if (!group) return null;
   const names = {
@@ -53,7 +51,7 @@ function getGroupName(group, category) {
   return names[group] || `Group ${group}`;
 }
 
-// Common oxidation states for elements (by atomic number)
+/** Common oxidation states for each element by atomic number. */
 const OXIDATION_STATES = {
   1: '+1, -1', 2: '0', 3: '+1', 4: '+2', 5: '+3', 6: '-4, -3, -2, -1, +1, +2, +3, +4',
   7: '-3, -2, -1, +1, +2, +3, +4, +5', 8: '-2, -1, +1, +2', 9: '-1', 10: '0',

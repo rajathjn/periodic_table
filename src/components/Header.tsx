@@ -1,9 +1,15 @@
-import React from 'react';
+/**
+ * Header — Persistent site header styled as a Windows 98 title bar.
+ *
+ * Contains the site logo (inline SVG atom icon + text) and navigation links.
+ * Uses `useLocation` to highlight the currently active route.
+ */
 import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const location = useLocation();
 
+  /** Returns true if the given path matches the current route. */
   const isActive = (path: string) => {
     if (path === '/') return location.pathname === '/';
     return location.pathname.startsWith(path);
@@ -12,6 +18,7 @@ const Header: React.FC = () => {
   return (
     <header className="site-header">
       <div className="header-inner">
+        {/* Logo — atom icon + site name, links back to home */}
         <Link to="/" className="header-logo">
           <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
             <circle cx="32" cy="32" r="6" fill="#ffffff" />
@@ -21,6 +28,8 @@ const Header: React.FC = () => {
           </svg>
           <span className="header-logo-text">Periodic Table</span>
         </Link>
+
+        {/* Navigation */}
         <nav className="header-nav">
           <Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link>
           <Link to="/about" className={isActive('/about') ? 'active' : ''}>About</Link>

@@ -1,18 +1,44 @@
-import React, { Suspense, useEffect } from 'react';
+/**
+ * ElementPage — Detailed view for a single element.
+ *
+ * Displays a hero section with the element's symbol, name, category badge,
+ * and an interactive 3D Bohr model (lazy-loaded). Below the hero: a summary,
+ * atomic properties table, electron configuration, discovery history, and
+ * an image gallery with sample photos, spectral images, and 2D Bohr models.
+ *
+ * Prev/Next navigation links let users browse elements sequentially.
+ */
+import { Suspense, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getElementBySymbol, getAdjacentElements, CATEGORY_COLORS, CATEGORY_LABELS } from '../utils/elementUtils';
 import PropertiesTable from '../components/PropertiesTable';
 
+/** Lazy-load the heavy Three.js-based GLB viewer to keep the initial bundle small. */
 const GLBViewer = React.lazy(() => import('../components/GLBViewer'));
+
+import React from 'react';
 
 const ElementPage: React.FC = () => {
   const { symbol } = useParams<{ symbol: string }>();
   const element = symbol ? getElementBySymbol(symbol) : undefined;
 
+  // Scroll to top whenever the element changes (e.g. via prev/next navigation)
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [symbol]);
 
+  // Update the browser tab title to reflect the current element.
+  // This hook must be called unconditionally (React rules of hooks),
+  // so it runs even when `element` is undefined (the guard return is below).
+  useEffect(() => {
+    if (element) {
+      document.title = `${element.name} (${element.symbol}) — Periodic Table`;
+    } else {
+      document.title = 'Element Not Found — Periodic Table';
+    }
+  }, [element]);
+
+  // --- Guard: element not found ---
   if (!element) {
     return (
       <div className="element-page" style={{ textAlign: 'center', paddingTop: 80 }}>
@@ -31,16 +57,9 @@ const ElementPage: React.FC = () => {
   const categoryColor = CATEGORY_COLORS[element.category_normalized] || CATEGORY_COLORS['unknown'];
   const categoryLabel = CATEGORY_LABELS[element.category_normalized] || element.category;
 
-  // Set page title
-  useEffect(() => {
-    document.title = `${element.name} (${element.symbol}) — Periodic Table`;
-  }, [element]);
-
-  // Used for fallbacks in image loading
-
   return (
     <div className="element-page">
-      {/* Hero Section */}
+      {/* ── Hero Section ── */}
       <div className="element-hero">
         <div className="element-hero-info">
           <div className="element-number">Element #{element.number}</div>
@@ -65,6 +84,8 @@ const ElementPage: React.FC = () => {
             </div>
           )}
         </div>
+
+        {/* Interactive 3D Bohr atom model */}
         <div className="bohr-model-container">
           <Suspense fallback={
             <div style={{
@@ -86,8 +107,8 @@ const ElementPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Summary */}
-      <section className="element-section animate-fadeInUp">
+      {/* ── Summary ── */}
+      <section className="element-section">
         <h2><span className="section-icon">📖</span> About {element.name}</h2>
         <p className="element-summary">
           {element.summary_extended || element.summary}
@@ -99,14 +120,14 @@ const ElementPage: React.FC = () => {
         )}
       </section>
 
-      {/* Properties */}
-      <section className="element-section animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
+      {/* ── Atomic Properties ── */}
+      <section className="element-section">
         <h2><span className="section-icon">⚛️</span> Atomic Properties</h2>
         <PropertiesTable element={element} />
       </section>
 
-      {/* Electron Configuration Details */}
-      <section className="element-section animate-fadeInUp" style={{ animationDelay: '0.15s' }}>
+      {/* ── Electron Configuration ── */}
+      <section className="element-section">
         <h2><span className="section-icon">🔬</span> Electron Configuration</h2>
         <div style={{
           padding: 'var(--space-md)',
@@ -137,10 +158,10 @@ const ElementPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Discovery */}
+      {/* ── Discovery & History ── */}
       {(element.discovered_by || element.named_by) && (
-        <section className="element-section animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-          <h2><span className="section-icon">🏛️</span> Discovery & History</h2>
+        <section className="element-section">
+          <h2><span className="section-icon">🏛️</span> Discovery &amp; History</h2>
           <div style={{ color: '#404040', lineHeight: 1.7 }}>
             {element.discovered_by && (
               <p>
@@ -164,10 +185,11 @@ const ElementPage: React.FC = () => {
         </section>
       )}
 
-      {/* Image Gallery */}
-      <section className="element-section element-image-section animate-fadeInUp" style={{ animationDelay: '0.25s' }}>
+      {/* ── Image Gallery ── */}
+      <section className="element-section element-image-section">
         <h2><span className="section-icon">📷</span> Image Gallery</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {/* Sample photograph */}
           {element.image && (element.image.local_url || element.image.url) && (
             <div>
               <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: '#000000' }}>Sample Image</h3>
@@ -185,6 +207,7 @@ const ElementPage: React.FC = () => {
             </div>
           )}
 
+          {/* Emission / absorption spectrum */}
           {(element.local_spectral_img || element.spectral_img) && (
             <div>
               <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: '#000000' }}>Spectral Image</h3>
@@ -198,6 +221,7 @@ const ElementPage: React.FC = () => {
             </div>
           )}
 
+          {/* 2D Bohr model diagram */}
           {(element.local_bohr_model_image || element.bohr_model_image) && (
             <div>
               <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: '#000000' }}>Bohr Model (2D)</h3>
@@ -215,7 +239,7 @@ const ElementPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Navigation */}
+      {/* ── Prev / Next Element Navigation ── */}
       <nav className="element-nav" aria-label="Element navigation">
         {prev ? (
           <Link to={`/elements/${prev.symbol}`}>

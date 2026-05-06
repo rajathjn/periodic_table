@@ -1,4 +1,9 @@
-import React, { useEffect } from 'react';
+/**
+ * LicensePage — Credits and attribution for data sources, images, and libraries.
+ *
+ * Also serves as the "About" page (both /license and /about route here).
+ */
+import { useEffect } from 'react';
 
 const LicensePage: React.FC = () => {
   useEffect(() => {
@@ -6,8 +11,8 @@ const LicensePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="license-page animate-fadeInUp">
-      <h1 className="gradient-text">License & Credits</h1>
+    <div className="license-page">
+      <h1 className="gradient-text">License &amp; Credits</h1>
 
       <h2>Data Sources</h2>
       <ul>
@@ -67,11 +72,11 @@ const LicensePage: React.FC = () => {
 
       <h2>Bohr Model Visualizations</h2>
       <p>
-        Bohr model images from Google's Arts & Experiments Periodic Table, hosted on Google Cloud Storage.
+        Bohr model images from Google's Arts &amp; Experiments Periodic Table, hosted on Google Cloud Storage.
         3D atom models rendered using Three.js with React Three Fiber.
       </p>
 
-      <h2>Libraries & Frameworks</h2>
+      <h2>Libraries &amp; Frameworks</h2>
       <ul>
         <li><strong>React</strong> — MIT License</li>
         <li><strong>Vite</strong> — MIT License</li>
@@ -79,15 +84,14 @@ const LicensePage: React.FC = () => {
         <li><strong>React Three Fiber</strong> — MIT License</li>
         <li><strong>Drei</strong> — MIT License</li>
         <li><strong>React Router</strong> — MIT License</li>
-        <li><strong>Zustand</strong> — MIT License</li>
         <li><strong>TypeScript</strong> — Apache 2.0 License</li>
       </ul>
 
       <h2>Fonts</h2>
       <ul>
-        <li><strong>Inter</strong> by Rasmus Andersson — SIL Open Font License</li>
-        <li><strong>Outfit</strong> by Rodrigo Fuenzalida — SIL Open Font License</li>
-        <li><strong>JetBrains Mono</strong> by JetBrains — SIL Open Font License</li>
+        <li><strong>Pixelify Sans</strong> by Stefie Justprince — SIL Open Font License</li>
+        <li><strong>VT323</strong> by Peter Hull — SIL Open Font License</li>
+        <li><strong>VCR OSD Mono</strong> by Riciery Leal — Free for personal use</li>
       </ul>
 
       <h2>Content License</h2>

@@ -1,4 +1,15 @@
-import React, { useState, useCallback } from 'react';
+/**
+ * PeriodicTable — The main 18-column periodic table grid.
+ *
+ * Renders all 118 elements in their standard positions. Lanthanides (Z 57–71)
+ * and Actinides (Z 89–103) are displayed in separate rows beneath the main grid,
+ * matching the conventional "pulled-out" layout.
+ *
+ * Features:
+ * - Category legend with click-to-filter (dims non-matching elements)
+ * - Hover tooltip showing element name, number, mass, phase, and category
+ */
+import { useState, useCallback } from 'react';
 import { getAllElements } from '../utils/elementUtils';
 import ElementCell from './ElementCell';
 import CategoryLegend from './CategoryLegend';
@@ -9,21 +20,26 @@ const PeriodicTable: React.FC = () => {
   const [hoveredElement, setHoveredElement] = useState<Element | null>(null);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
+  /** Memoized hover handler to avoid re-creating on every render. */
   const handleHover = useCallback((el: Element | null) => {
     setHoveredElement(el);
   }, []);
 
-  // Split elements into main table and lanthanides/actinides
+  // Split elements into main table vs. the two f-block rows
   const mainElements = elements.filter(el => {
-    // Lanthanides: Z=57-71, Actinides: Z=89-103
-    if (el.number >= 57 && el.number <= 71) return false;
-    if (el.number >= 89 && el.number <= 103) return false;
+    if (el.number >= 57 && el.number <= 71) return false; // Lanthanides
+    if (el.number >= 89 && el.number <= 103) return false; // Actinides
     return true;
   });
 
   const lanthanides = elements.filter(el => el.number >= 57 && el.number <= 71);
   const actinides = elements.filter(el => el.number >= 89 && el.number <= 103);
 
+  /**
+   * Determines if an element should be visually highlighted.
+   * Returns `undefined` when no filter is active (all elements shown normally),
+   * `true` if the element matches the active category, or `false` to dim it.
+   */
   const isHighlighted = (el: Element): boolean | undefined => {
     if (!activeCategory) return undefined;
     return el.category_normalized === activeCategory;
@@ -31,6 +47,7 @@ const PeriodicTable: React.FC = () => {
 
   return (
     <div className="periodic-table-wrapper">
+      {/* Title */}
       <div className="periodic-table-title">
         <h1 className="minecraft-font">
           <span className="gradient-text">THE PERIODIC TABLE OF ELEMENTS</span> 
@@ -38,12 +55,13 @@ const PeriodicTable: React.FC = () => {
         <p>Explore all 118 elements — click any element to learn more</p>
       </div>
 
+      {/* Category filter legend */}
       <CategoryLegend
         activeCategory={activeCategory}
         onCategoryClick={setActiveCategory}
       />
 
-      {/* Main periodic table grid */}
+      {/* Main 18-column grid (excludes lanthanides & actinides) */}
       <div className="periodic-table" role="grid" aria-label="Periodic Table of Elements">
         {mainElements.map(el => (
           <ElementCell
@@ -55,8 +73,9 @@ const PeriodicTable: React.FC = () => {
         ))}
       </div>
 
-      {/* Lanthanide & Actinide rows */}
+      {/* Lanthanide & Actinide rows (displayed below the main grid) */}
       <div style={{ maxWidth: 1300, margin: '8px auto 0', padding: '0 16px' }}>
+        {/* Lanthanides row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginBottom: 4, marginTop: 8 }}>
           <span className="la-ac-label" style={{ width: 62, flexShrink: 0 }}>La</span>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(15, minmax(52px, 1fr))', gap: 2, flex: 1 }}>
@@ -70,9 +89,10 @@ const PeriodicTable: React.FC = () => {
             ))}
           </div>
         </div>
+        {/* Actinides row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
           <span className="la-ac-label" style={{ width: 62, flexShrink: 0 }}>Ac</span>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(15, minmax(52px, 1fr))', gap: 3, flex: 1 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(15, minmax(52px, 1fr))', gap: 2, flex: 1 }}>
             {actinides.map(el => (
               <ElementCell
                 key={el.number}
@@ -85,7 +105,7 @@ const PeriodicTable: React.FC = () => {
         </div>
       </div>
 
-      {/* Hover info tooltip */}
+      {/* Win98-style tooltip — shown fixed at the bottom center on hover */}
       {hoveredElement && (
         <div
           style={{

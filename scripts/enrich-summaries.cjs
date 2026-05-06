@@ -1,5 +1,14 @@
-// Fetch enriched element summaries from Simple Wikipedia
-// Uses the Wikipedia API to get the extract (plain text summary) for each element
+/**
+ * enrich-summaries.cjs
+ *
+ * Fetches extended plain-text summaries from Simple English Wikipedia for
+ * each element and stores them as `summary_extended` in elements.json.
+ * The app uses these as the primary description on element detail pages,
+ * with the original Bowserinator summary as a fallback.
+ *
+ * Usage: node scripts/enrich-summaries.cjs
+ */
+// Uses the Wikipedia REST API to get the extract (plain text summary) for each element
 const fs = require('fs');
 const path = require('path');
 const https = require('https');

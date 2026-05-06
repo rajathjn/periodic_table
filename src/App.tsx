@@ -1,4 +1,15 @@
-import React from 'react';
+/**
+ * App — Root application component.
+ *
+ * Sets up client-side routing with HashRouter (for GitHub Pages compatibility)
+ * and renders the persistent header, floating atom background, and page routes.
+ *
+ * Routes:
+ *   /                   → HomePage  (periodic table grid + "Discover" section)
+ *   /elements/:symbol   → ElementPage (detailed element view with 3D model)
+ *   /license            → LicensePage (data sources and credits)
+ *   /about              → LicensePage (alias for /license)
+ */
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import AtomBackground from './components/AtomBackground';

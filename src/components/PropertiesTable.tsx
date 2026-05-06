@@ -1,4 +1,9 @@
-import React from 'react';
+/**
+ * PropertiesTable — Grid of key atomic properties for an element.
+ *
+ * Renders a two-column grid of label/value pairs covering physical,
+ * chemical, and structural properties. Null values are displayed as "—".
+ */
 import type { Element } from '../types/Element';
 import { formatValue } from '../utils/elementUtils';
 
@@ -7,6 +12,7 @@ interface PropertiesTableProps {
 }
 
 const PropertiesTable: React.FC<PropertiesTableProps> = ({ element }) => {
+  /** Property definitions — each row is a label + formatted value string. */
   const properties = [
     { label: 'Atomic Number', value: String(element.number) },
     { label: 'Atomic Mass', value: formatValue(element.atomic_mass, 'u') },

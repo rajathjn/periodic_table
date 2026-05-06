@@ -1,5 +1,14 @@
-import React from 'react';
+/**
+ * AtomBackground — Decorative floating atom SVGs rendered behind page content.
+ *
+ * Creates a fixed-position overlay with 12 translucent atom illustrations
+ * at varying sizes and positions. Each atom gently bobs using the `float`
+ * CSS animation with staggered delays for an organic feel.
+ *
+ * Marked `aria-hidden` since it is purely decorative.
+ */
 
+/** Inline SVG of a simple Rutherford-style atom (nucleus + 3 elliptical orbits). */
 interface AtomSVGProps {
   size?: number;
   color?: string;
@@ -7,16 +16,23 @@ interface AtomSVGProps {
 
 const AtomSVG: React.FC<AtomSVGProps> = ({ size = 120, color = 'currentColor' }) => (
   <svg width={size} height={size} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Nucleus */}
     <circle cx="60" cy="60" r="8" fill={color} opacity="0.6" />
+    {/* Three orbital ellipses, each rotated 60° apart */}
     <ellipse cx="60" cy="60" rx="50" ry="18" stroke={color} strokeWidth="1.2" opacity="0.4" />
     <ellipse cx="60" cy="60" rx="50" ry="18" stroke={color} strokeWidth="1.2" opacity="0.4" transform="rotate(60 60 60)" />
     <ellipse cx="60" cy="60" rx="50" ry="18" stroke={color} strokeWidth="1.2" opacity="0.4" transform="rotate(120 60 60)" />
+    {/* Electron dots at the tips of each orbit */}
     <circle cx="110" cy="60" r="4" fill={color} opacity="0.5" />
     <circle cx="35" cy="16.7" r="4" fill={color} opacity="0.5" />
     <circle cx="35" cy="103.3" r="4" fill={color} opacity="0.5" />
   </svg>
 );
 
+/**
+ * Pre-defined positions and sizes for each background atom.
+ * Negative `delay` values stagger the animations so they don't all bob in sync.
+ */
 const ATOM_POSITIONS = [
   { x: '5%', y: '10%', size: 80, delay: 0 },
   { x: '85%', y: '5%', size: 100, delay: -3 },
