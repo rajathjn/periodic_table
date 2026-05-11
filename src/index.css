@@ -601,6 +601,52 @@ button:active {
   box-shadow: var(--bevel-sunken);
 }
 
+/* ── Model Toggle Buttons (Orbit / Orbital) ── */
+.model-toggle-group {
+  display: inline-flex;
+  gap: 2px;
+  margin-top: 14px;
+  background: #808080;
+  padding: 2px;
+  box-shadow: var(--bevel-sunken);
+}
+
+.model-toggle-btn {
+  padding: 4px 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  cursor: pointer;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: none;
+  box-shadow: var(--bevel-button);
+  outline: none;
+  position: relative;
+}
+
+.model-toggle-btn:hover {
+  background: var(--bg-surface-hover);
+}
+
+.model-toggle-btn.active {
+  box-shadow: var(--bevel-button-pressed);
+  background: #ffffff;
+  color: var(--accent-primary);
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.model-toggle-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 4px;
+  right: 4px;
+  height: 2px;
+  background: var(--accent-primary);
+}
+
 /* ── Element Content Sections ── */
 .element-section {
   margin-bottom: var(--space-xl);

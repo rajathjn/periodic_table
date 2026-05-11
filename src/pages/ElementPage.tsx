@@ -8,7 +8,7 @@
  *
  * Prev/Next navigation links let users browse elements sequentially.
  */
-import { Suspense, useEffect } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getElementBySymbol, getAdjacentElements, CATEGORY_COLORS, CATEGORY_LABELS } from '../utils/elementUtils';
 import PropertiesTable from '../components/PropertiesTable';
@@ -23,8 +23,13 @@ const ElementPage: React.FC = () => {
   const element = symbol ? getElementBySymbol(symbol) : undefined;
 
   // Scroll to top whenever the element changes (e.g. via prev/next navigation)
+  // Track which 3D model is shown: orbit (Bohr) or orbital
+  const [modelMode, setModelMode] = useState<'orbit' | 'orbital'>('orbit');
+
+  // Scroll to top and reset model mode whenever the element changes
   useEffect(() => {
     window.scrollTo(0, 0);
+    setModelMode('orbit');
   }, [symbol]);
 
   // Update the browser tab title to reflect the current element.
@@ -88,9 +93,26 @@ const ElementPage: React.FC = () => {
               <span role="img" aria-label="fun fact">💡</span> {element.fun_fact}
             </div>
           )}
+          {/* Orbit / Orbital model toggle buttons */}
+          <div className="model-toggle-group">
+            <button
+              id="btn-orbit-model"
+              className={`model-toggle-btn${modelMode === 'orbit' ? ' active' : ''}`}
+              onClick={() => setModelMode('orbit')}
+            >
+              🪐 Orbit Model
+            </button>
+            <button
+              id="btn-orbital-model"
+              className={`model-toggle-btn${modelMode === 'orbital' ? ' active' : ''}`}
+              onClick={() => setModelMode('orbital')}
+            >
+              ☁️ Orbital Model
+            </button>
+          </div>
         </div>
 
-        {/* Interactive 3D Bohr atom model */}
+        {/* Interactive 3D model — switches between Orbit (Bohr) and Orbital */}
         <div className="bohr-model-container">
           <Suspense fallback={
             <div style={{
@@ -101,13 +123,19 @@ const ElementPage: React.FC = () => {
               Loading 3D Model...
             </div>
           }>
-            {element.local_bohr_model_3d || element.bohr_model_3d ? (
-              <GLBViewer url={element.local_bohr_model_3d || element.bohr_model_3d!} />
-            ) : (
-              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#808080' }}>
-                No 3D Model Available
-              </div>
-            )}
+            {(() => {
+              const modelUrl = modelMode === 'orbital'
+                ? element.local_orbital_model_3d
+                : (element.local_bohr_model_3d || element.bohr_model_3d);
+
+              return modelUrl ? (
+                <GLBViewer key={`${element.symbol}-${modelMode}`} url={modelUrl} />
+              ) : (
+                <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#808080' }}>
+                  No 3D Model Available
+                </div>
+              );
+            })()}
           </Suspense>
         </div>
       </div>

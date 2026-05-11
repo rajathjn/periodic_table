@@ -42,6 +42,7 @@ export interface Element {
   local_bohr_model_image?: string;
   bohr_model_3d: string | null;
   local_bohr_model_3d?: string;
+  local_orbital_model_3d?: string;
   oxidation_states: string;
   group_name: string | null;
   fun_fact?: string;
