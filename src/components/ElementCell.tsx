@@ -10,7 +10,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import type { Element } from '../types/Element';
-import { CATEGORY_COLORS } from '../utils/elementUtils';
+import { CATEGORY_COLORS, formatMass } from '../utils/elementUtils';
 
 interface ElementCellProps {
   element: Element;
@@ -44,7 +44,7 @@ const ElementCell: React.FC<ElementCellProps> = ({ element, onHover, highlighted
       <span className="atomic-number">{element.number}</span>
       <span className="symbol" style={{ color: categoryColor }}>{element.symbol}</span>
       <span className="name">{element.name}</span>
-      <span className="mass">{element.atomic_mass.toFixed(2)}</span>
+      <span className="mass">{formatMass(element.atomic_mass, 2)}</span>
     </Link>
   );
 };

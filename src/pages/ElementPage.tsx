@@ -10,7 +10,7 @@
  */
 import { Suspense, useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getElementBySymbol, getAdjacentElements, CATEGORY_COLORS, CATEGORY_LABELS } from '../utils/elementUtils';
+import { getElementBySymbol, getAdjacentElements, CATEGORY_COLORS, CATEGORY_LABELS, formatMass } from '../utils/elementUtils';
 import PropertiesTable from '../components/PropertiesTable';
 
 /** Lazy-load the heavy Three.js-based GLB viewer to keep the initial bundle small. */
@@ -22,15 +22,15 @@ const ElementPage: React.FC = () => {
   const { symbol } = useParams<{ symbol: string }>();
   const element = symbol ? getElementBySymbol(symbol) : undefined;
 
-  // Scroll to top whenever the element changes (e.g. via prev/next navigation)
-  // Track which 3D model is shown: orbit (Bohr) or orbital
+  // Track which 3D model is shown: orbit (Bohr) or orbital.
+  // State resets automatically on navigation because App.tsx renders this
+  // component with `key={symbol}`, causing a full remount on element change.
   const [modelMode, setModelMode] = useState<'orbit' | 'orbital'>('orbit');
 
-  // Scroll to top and reset model mode whenever the element changes
+  // Scroll to top whenever the component mounts (i.e. when element changes)
   useEffect(() => {
     window.scrollTo(0, 0);
-    setModelMode('orbit');
-  }, [symbol]);
+  }, []);
 
   // Update the browser tab title to reflect the current element.
   // This hook must be called unconditionally (React rules of hooks),
@@ -81,7 +81,7 @@ const ElementPage: React.FC = () => {
             {categoryLabel}
           </span>
           <div className="element-mass" style={{ marginTop: 8 }}>
-            {element.atomic_mass.toFixed(4)} u
+            {formatMass(element.atomic_mass, 4)} u
           </div>
           {element.group_name && (
             <div style={{ color: '#808080', fontSize: '0.85rem', marginTop: 4 }}>

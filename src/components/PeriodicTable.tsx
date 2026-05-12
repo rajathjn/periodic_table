@@ -10,7 +10,7 @@
  * - Hover tooltip showing element name, number, mass, phase, and category
  */
 import { useState, useCallback } from 'react';
-import { getAllElements } from '../utils/elementUtils';
+import { getAllElements, formatMass } from '../utils/elementUtils';
 import ElementCell from './ElementCell';
 import CategoryLegend from './CategoryLegend';
 import type { Element } from '../types/Element';
@@ -135,7 +135,7 @@ const PeriodicTable: React.FC = () => {
           <div>
             <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#000000' }}>{hoveredElement.name}</div>
             <div style={{ color: '#404040', fontSize: '0.8rem' }}>
-              #{hoveredElement.number} · {hoveredElement.atomic_mass.toFixed(3)} u · {hoveredElement.phase} · {hoveredElement.category}
+              #{hoveredElement.number} · {formatMass(hoveredElement.atomic_mass, 3)} u · {hoveredElement.phase} · {hoveredElement.category}
             </div>
           </div>
         </div>

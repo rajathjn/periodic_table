@@ -53,6 +53,18 @@ export function formatValue(value: number | null | undefined, unit?: string): st
   return unit ? `${formatted} ${unit}` : formatted;
 }
 
+/**
+ * Safely formats an element's atomic mass to a given number of decimal places.
+ * Handles superheavy elements (Z ≥ 104) whose `atomic_mass` is stored as a
+ * bracketed string like `"[267]"` — these are parsed to a number first.
+ * If parsing fails the raw value is returned as-is.
+ */
+export function formatMass(mass: number | string, digits: number): string {
+  if (typeof mass === 'number') return mass.toFixed(digits);
+  const parsed = Number(mass.replace(/[[\]]/g, ''));
+  return Number.isNaN(parsed) ? String(mass) : parsed.toFixed(digits);
+}
+
 /** Human-readable display names for each normalized category slug. */
 export const CATEGORY_LABELS: Record<string, string> = {
   'alkali-metal': 'Alkali Metal',
