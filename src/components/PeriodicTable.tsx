@@ -8,12 +8,18 @@
  * Features:
  * - Category legend with click-to-filter (dims non-matching elements)
  * - Hover tooltip showing element name, number, mass, phase, and category
+ *
+ * Performance:
+ * - Element arrays are memoized to avoid re-filtering on every render
+ * - Lanthanide/Actinide objects with adjusted xpos are pre-computed once
+ * - ElementCell is React.memo'd so unchanged cells skip re-rendering
  */
-import { useState, useCallback } from 'react';
-import { getAllElements, formatMass } from '../utils/elementUtils';
+import { useState, useCallback, useMemo } from 'react';
+import { getAllElements } from '@/utils/elementUtils';
 import ElementCell from './ElementCell';
 import CategoryLegend from './CategoryLegend';
-import type { Element } from '../types/Element';
+import ElementTooltip from './ElementTooltip';
+import type { Element } from '@/types/Element';
 
 const PeriodicTable: React.FC = () => {
   const elements = getAllElements();
@@ -25,15 +31,34 @@ const PeriodicTable: React.FC = () => {
     setHoveredElement(el);
   }, []);
 
-  // Split elements into main table vs. the two f-block rows
-  const mainElements = elements.filter(el => {
-    if (el.number >= 57 && el.number <= 71) return false; // Lanthanides
-    if (el.number >= 89 && el.number <= 103) return false; // Actinides
-    return true;
-  });
+  // Split elements into main table vs. the two f-block rows — memoized
+  const mainElements = useMemo(
+    () =>
+      elements.filter((el) => {
+        if (el.number >= 57 && el.number <= 71) return false; // Lanthanides
+        if (el.number >= 89 && el.number <= 103) return false; // Actinides
+        return true;
+      }),
+    [elements],
+  );
 
-  const lanthanides = elements.filter(el => el.number >= 57 && el.number <= 71);
-  const actinides = elements.filter(el => el.number >= 89 && el.number <= 103);
+  // Pre-compute lanthanide/actinide objects with adjusted xpos ONCE
+  // so we don't defeat React.memo by spreading new objects every render
+  const lanthanides = useMemo(
+    () =>
+      elements
+        .filter((el) => el.number >= 57 && el.number <= 71)
+        .map((el) => ({ ...el, xpos: el.number - 56 }) as Element),
+    [elements],
+  );
+
+  const actinides = useMemo(
+    () =>
+      elements
+        .filter((el) => el.number >= 89 && el.number <= 103)
+        .map((el) => ({ ...el, xpos: el.number - 88 }) as Element),
+    [elements],
+  );
 
   /**
    * Determines if an element should be visually highlighted.
@@ -50,20 +75,17 @@ const PeriodicTable: React.FC = () => {
       {/* Title */}
       <div className="periodic-table-title">
         <h1 className="minecraft-font">
-          <span className="gradient-text">THE PERIODIC TABLE OF ELEMENTS</span> 
+          <span className="gradient-text">THE PERIODIC TABLE OF ELEMENTS</span>
         </h1>
         <p>Explore all 118 elements — click any element to learn more</p>
       </div>
 
       {/* Category filter legend */}
-      <CategoryLegend
-        activeCategory={activeCategory}
-        onCategoryClick={setActiveCategory}
-      />
+      <CategoryLegend activeCategory={activeCategory} onCategoryClick={setActiveCategory} />
 
       {/* Main 18-column grid (excludes lanthanides & actinides) */}
       <div className="periodic-table" role="grid" aria-label="Periodic Table of Elements">
-        {mainElements.map(el => (
+        {mainElements.map((el) => (
           <ElementCell
             key={el.number}
             element={el}
@@ -74,15 +96,15 @@ const PeriodicTable: React.FC = () => {
       </div>
 
       {/* Lanthanide & Actinide rows (displayed below the main grid) */}
-      <div style={{ maxWidth: 1300, margin: '8px auto 0', padding: '0 16px' }}>
+      <div className="la-ac-rows">
         {/* Lanthanides row */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginBottom: 4, marginTop: 8 }}>
-          <span className="la-ac-label" style={{ width: 62, flexShrink: 0 }}>La</span>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(15, minmax(52px, 1fr))', gap: 2, flex: 1 }}>
-            {lanthanides.map(el => (
+        <div className="la-ac-row">
+          <span className="la-ac-label">La</span>
+          <div className="la-ac-grid">
+            {lanthanides.map((el) => (
               <ElementCell
                 key={el.number}
-                element={{ ...el, xpos: el.number - 56 } as Element}
+                element={el}
                 onHover={handleHover}
                 highlighted={isHighlighted(el)}
               />
@@ -90,13 +112,13 @@ const PeriodicTable: React.FC = () => {
           </div>
         </div>
         {/* Actinides row */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-          <span className="la-ac-label" style={{ width: 62, flexShrink: 0 }}>Ac</span>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(15, minmax(52px, 1fr))', gap: 2, flex: 1 }}>
-            {actinides.map(el => (
+        <div className="la-ac-row la-ac-row--actinides">
+          <span className="la-ac-label">Ac</span>
+          <div className="la-ac-grid">
+            {actinides.map((el) => (
               <ElementCell
                 key={el.number}
-                element={{ ...el, xpos: el.number - 88 } as Element}
+                element={el}
                 onHover={handleHover}
                 highlighted={isHighlighted(el)}
               />
@@ -106,40 +128,7 @@ const PeriodicTable: React.FC = () => {
       </div>
 
       {/* Win98-style tooltip — shown fixed at the bottom center on hover */}
-      {hoveredElement && (
-        <div
-          style={{
-            position: 'fixed',
-            bottom: 20,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            background: '#ffffe1',
-            border: '1px solid #000000',
-            borderRadius: 0,
-            padding: '8px 16px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 12,
-            zIndex: 50,
-            boxShadow: '2px 2px 0 #808080',
-          }}
-        >
-          <span style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.8rem',
-            fontWeight: 700,
-            color: 'var(--accent-primary)',
-          }}>
-            {hoveredElement.symbol}
-          </span>
-          <div>
-            <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#000000' }}>{hoveredElement.name}</div>
-            <div style={{ color: '#404040', fontSize: '0.8rem' }}>
-              #{hoveredElement.number} · {formatMass(hoveredElement.atomic_mass, 3)} u · {hoveredElement.phase} · {hoveredElement.category}
-            </div>
-          </div>
-        </div>
-      )}
+      <ElementTooltip element={hoveredElement} />
     </div>
   );
 };

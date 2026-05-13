@@ -7,7 +7,7 @@
  */
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { getRandomElement, CATEGORY_COLORS } from '../utils/elementUtils';
+import { getRandomElement, CATEGORY_COLORS } from '@/utils/elementUtils';
 
 const DiscoverElement: React.FC = () => {
   /** Select a random element once on mount — stays stable across re-renders. */

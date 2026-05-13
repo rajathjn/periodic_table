@@ -4,8 +4,8 @@
  * Renders a two-column grid of label/value pairs covering physical,
  * chemical, and structural properties. Null values are displayed as "—".
  */
-import type { Element } from '../types/Element';
-import { formatValue } from '../utils/elementUtils';
+import type { Element } from '@/types/Element';
+import { formatValue } from '@/utils/elementUtils';
 
 interface PropertiesTableProps {
   element: Element;

@@ -3,8 +3,8 @@
  * and a randomized "Discover an Element" feature card.
  */
 import { useEffect } from 'react';
-import PeriodicTable from '../components/PeriodicTable';
-import DiscoverElement from '../components/DiscoverElement';
+import PeriodicTable from '@/components/PeriodicTable';
+import DiscoverElement from '@/components/DiscoverElement';
 
 const HomePage: React.FC = () => {
   useEffect(() => {

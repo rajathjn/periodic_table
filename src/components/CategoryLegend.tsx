@@ -5,7 +5,7 @@
  * toggles it as the active filter — all non-matching element cells are
  * dimmed on the main grid. Clicking the same category again clears the filter.
  */
-import { CATEGORY_LABELS, CATEGORY_COLORS } from '../utils/elementUtils';
+import { CATEGORY_LABELS, CATEGORY_COLORS } from '@/utils/elementUtils';
 
 interface CategoryLegendProps {
   /** Currently selected category slug, or `null` if no filter is active. */

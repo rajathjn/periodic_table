@@ -3,12 +3,25 @@
  *
  * Provides lookup helpers for the element dataset, formatting utilities,
  * and shared category label/color mappings used across the UI.
+ *
+ * Lookups use pre-built Map indices for O(1) access instead of
+ * linear scans — important as search/filter features are added.
  */
-import elementsData from '../data/elements.json';
-import type { Element } from '../types/Element';
+import elementsData from '@/data/elements.json';
+import type { Element } from '@/types/Element';
 
-/** Full array of all 118 elements, typed from the JSON dataset. */
+/** Full array of all 118+ elements, typed from the JSON dataset. */
 const elements: Element[] = elementsData as Element[];
+
+/** O(1) lookup by lowercase symbol (e.g. "he" → Helium). */
+const bySymbol = new Map<string, Element>(
+  elements.map((el) => [el.symbol.toLowerCase(), el]),
+);
+
+/** O(1) lookup by atomic number (e.g. 26 → Iron). */
+const byNumber = new Map<number, Element>(
+  elements.map((el) => [el.number, el]),
+);
 
 /** Returns the complete list of all elements. */
 export function getAllElements(): Element[] {
@@ -20,22 +33,25 @@ export function getAllElements(): Element[] {
  * Returns `undefined` if no match is found.
  */
 export function getElementBySymbol(symbol: string): Element | undefined {
-  return elements.find(el => el.symbol.toLowerCase() === symbol.toLowerCase());
+  return bySymbol.get(symbol.toLowerCase());
 }
 
 /** Returns a random element — used by the "Discover an Element" card. */
 export function getRandomElement(): Element {
-  return elements[Math.floor(Math.random() * elements.length)];
+  return elements[Math.floor(Math.random() * elements.length)]!;
 }
 
 /**
  * Returns the elements immediately before and after `number` in the periodic table.
  * Used for prev/next navigation on the ElementPage.
  */
-export function getAdjacentElements(number: number): { prev: Element | undefined; next: Element | undefined } {
+export function getAdjacentElements(number: number): {
+  prev: Element | undefined;
+  next: Element | undefined;
+} {
   return {
-    prev: elements.find(el => el.number === number - 1),
-    next: elements.find(el => el.number === number + 1),
+    prev: byNumber.get(number - 1),
+    next: byNumber.get(number + 1),
   };
 }
 

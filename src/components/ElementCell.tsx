@@ -9,8 +9,8 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import type { Element } from '../types/Element';
-import { CATEGORY_COLORS, formatMass } from '../utils/elementUtils';
+import type { Element } from '@/types/Element';
+import { CATEGORY_COLORS, formatMass } from '@/utils/elementUtils';
 
 interface ElementCellProps {
   element: Element;
