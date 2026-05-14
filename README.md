@@ -24,7 +24,7 @@ An interactive, Windows 98-themed periodic table web app built with **React**, *
 
 ## Sponsored By GitAds
 
-<!-- GitAds-Verify: HQGEIEFKJY14LER2OCUQQX8QW5K2F47K -->
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=rajathjn/periodic_table@github)](https://gitads.dev/v1/ad-track?source=rajathjn/periodic_table@github)
 
 ---
 
