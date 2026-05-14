@@ -22,6 +22,12 @@ An interactive, Windows 98-themed periodic table web app built with **React**, *
 
 ---
 
+## Sponsored By GitAds
+
+<!-- GitAds-Verify: HQGEIEFKJY14LER2OCUQQX8QW5K2F47K -->
+
+---
+
 ## 🛠️ Tech Stack
 
 | Layer         | Technology                                                                                                                       |
