@@ -17,22 +17,25 @@ const BOWSER_URL = 'https://raw.githubusercontent.com/Bowserinator/Periodic-Tabl
 
 /**
  * Normalizes the raw Bowserinator category string into a URL-friendly slug.
- * Maps variations like "diatomic nonmetal" and "polyatomic nonmetal" to "nonmetal",
- * and any unrecognized category to "unknown".
+ * Maps variations like "diatomic nonmetal" and "polyatomic nonmetal" to "nonmetal".
+ * Group 17 elements (F, Cl, Br, I, At, Ts) are always classified as "halogen"
+ * regardless of how the upstream source labels them.
  */
-function normalizeCategory(cat) {
-  if (!cat) return 'unknown';
+function normalizeCategory(cat, group) {
+  if (group === 17) return 'halogen';
+  if (!cat) return 'nonmetal';
   const c = cat.toLowerCase();
   if (c.includes('alkali') && !c.includes('alkaline')) return 'alkali-metal';
   if (c.includes('alkaline')) return 'alkaline-earth-metal';
   if (c.includes('transition') && !c.includes('post')) return 'transition-metal';
   if (c.includes('post-transition')) return 'post-transition-metal';
   if (c.includes('metalloid')) return 'metalloid';
+  if (c.includes('halogen')) return 'halogen';
   if (c.includes('nonmetal') || c.includes('reactive nonmetal')) return 'nonmetal';
   if (c.includes('noble')) return 'noble-gas';
   if (c.includes('lanthanide')) return 'lanthanide';
   if (c.includes('actinide')) return 'actinide';
-  return 'unknown';
+  return 'nonmetal';
 }
 
 /** Returns a descriptive group name like "Halogens (Group 17)" for known groups. */
@@ -90,7 +93,7 @@ async function main() {
     name: el.name,
     atomic_mass: el.atomic_mass,
     category: el.category,
-    category_normalized: normalizeCategory(el.category),
+    category_normalized: normalizeCategory(el.category, el.group),
     appearance: el.appearance,
     phase: el.phase,
     density: el.density,

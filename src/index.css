@@ -49,10 +49,11 @@
   --cat-post-transition-metal: #008000;
   --cat-metalloid: #008B8B;
   --cat-nonmetal: #0000FF;
+  --cat-halogen: #6B8E23;
   --cat-noble-gas: #800080;
   --cat-lanthanide: #FF0080;
   --cat-actinide: #C00080;
-  --cat-unknown: #808080;
+  --cat-unknown: #909090;
 
   /* Category Backgrounds — softer tints for element cell fills */
   --cat-bg-alkali-metal: #ffc0c0;
@@ -61,10 +62,11 @@
   --cat-bg-post-transition-metal: #c0e0c0;
   --cat-bg-metalloid: #c0e0e0;
   --cat-bg-nonmetal: #c0c0ff;
+  --cat-bg-halogen: #e8f5b8;
   --cat-bg-noble-gas: #e0c0e0;
   --cat-bg-lanthanide: #ffc0e0;
   --cat-bg-actinide: #e0c0d0;
-  --cat-bg-unknown: #d0d0d0;
+  --cat-bg-unknown: #e8e8e8;
 
   /* Spacing Scale */
   --space-xs: 4px;
@@ -194,6 +196,81 @@ button:active {
 @keyframes pulse {
   0%, 100% { opacity: 0.3; }
   50% { opacity: 0.5; }
+}
+
+/*
+ * Respect users who prefer reduced motion: collapse non-essential
+ * animations to a single frame and disable smooth scrolling.
+ * Keep transitions extremely short (1ms) rather than 0 to avoid
+ * dropping `transitionend` events that some components rely on.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Error Boundary fallback (Win98 dialog) ── */
+.error-boundary {
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+}
+.error-boundary__window {
+  background: var(--bg-secondary, #c0c0c0);
+  box-shadow: var(--bevel-window, inset -1px -1px #000, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #dfdfdf);
+  max-width: 520px;
+  width: 100%;
+}
+.error-boundary__title-bar {
+  background: var(--accent-primary, #000080);
+  color: #fff;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-family: 'Pixelify Sans', 'Tahoma', sans-serif;
+}
+.error-boundary__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.error-boundary__message {
+  background: #fff;
+  border: 1px solid #808080;
+  padding: 8px;
+  font-family: 'VT323', 'Courier New', monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 200px;
+  overflow: auto;
+  margin: 0;
+}
+
+/* Generic Win98-styled button (used by ErrorBoundary and other UI primitives). */
+.win98-button {
+  background: var(--bg-secondary, #c0c0c0);
+  box-shadow: var(--bevel-button, inset -1px -1px #000, inset 1px 1px #fff, inset -2px -2px #808080, inset 2px 2px #dfdfdf);
+  border: none;
+  padding: 4px 16px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+  align-self: flex-start;
+}
+.win98-button:active {
+  box-shadow: inset 1px 1px #000, inset -1px -1px #fff, inset 2px 2px #808080, inset -2px -2px #dfdfdf;
+}
+.win98-button:focus-visible {
+  outline: 1px dotted #000;
+  outline-offset: -4px;
 }
 
 /* ── Scrollbar (Win98 style) ── */
@@ -408,6 +485,7 @@ button:active {
 .element-cell[data-category="post-transition-metal"] { background: var(--cat-bg-post-transition-metal); }
 .element-cell[data-category="metalloid"] { background: var(--cat-bg-metalloid); }
 .element-cell[data-category="nonmetal"] { background: var(--cat-bg-nonmetal); }
+.element-cell[data-category="halogen"] { background: var(--cat-bg-halogen); }
 .element-cell[data-category="noble-gas"] { background: var(--cat-bg-noble-gas); }
 .element-cell[data-category="lanthanide"] { background: var(--cat-bg-lanthanide); }
 .element-cell[data-category="actinide"] { background: var(--cat-bg-actinide); }
@@ -420,6 +498,7 @@ button:active {
 .element-cell[data-category="post-transition-metal"]:hover,
 .element-cell[data-category="metalloid"]:hover,
 .element-cell[data-category="nonmetal"]:hover,
+.element-cell[data-category="halogen"]:hover,
 .element-cell[data-category="noble-gas"]:hover,
 .element-cell[data-category="lanthanide"]:hover,
 .element-cell[data-category="actinide"]:hover,

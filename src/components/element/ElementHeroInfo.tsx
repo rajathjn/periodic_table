@@ -19,7 +19,7 @@ const ElementHeroInfo: React.FC<ElementHeroInfoProps> = ({
   modelMode,
   onModelModeChange,
 }) => {
-  const categoryColor = CATEGORY_COLORS[element.category_normalized] || CATEGORY_COLORS['unknown'];
+  const categoryColor = CATEGORY_COLORS[element.category_normalized] || CATEGORY_COLORS['nonmetal'];
   const categoryLabel = CATEGORY_LABELS[element.category_normalized] || element.category;
 
   return (

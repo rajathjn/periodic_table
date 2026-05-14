@@ -13,8 +13,22 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install --with-deps chromium",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "analyze": "vite-bundle-visualizer -o stats.html",
+    "size": "size-limit",
+    "deploy": "gh-pages -d dist",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{js,cjs,mjs,json,css,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
@@ -25,7 +39,11 @@
     "three": "^0.184.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.49.1",
+    "@size-limit/preset-app": "^11.1.6",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/node": "^24.12.2",
@@ -34,15 +52,20 @@
     "@types/three": "^0.184.0",
     "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^10.2.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "gh-pages": "^6.3.0",
     "globals": "^17.5.0",
+    "husky": "^9.1.7",
     "jsdom": "^29.1.1",
+    "lint-staged": "^15.3.0",
     "prettier": "^3.8.3",
+    "size-limit": "^11.1.6",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
     "vite": "^8.0.10",
+    "vite-bundle-visualizer": "^1.2.1",
     "vitest": "^4.1.6"
   }
 }

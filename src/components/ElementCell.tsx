@@ -25,7 +25,7 @@ interface ElementCellProps {
 }
 
 const ElementCell: React.FC<ElementCellProps> = ({ element, onHover, highlighted }) => {
-  const categoryColor = CATEGORY_COLORS[element.category_normalized] || CATEGORY_COLORS['unknown'];
+  const categoryColor = CATEGORY_COLORS[element.category_normalized] || CATEGORY_COLORS['nonmetal'];
 
   return (
     <Link

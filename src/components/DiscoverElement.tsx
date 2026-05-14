@@ -12,7 +12,7 @@ import { getRandomElement, CATEGORY_COLORS } from '@/utils/elementUtils';
 const DiscoverElement: React.FC = () => {
   /** Select a random element once on mount — stays stable across re-renders. */
   const element = useMemo(() => getRandomElement(), []);
-  const color = CATEGORY_COLORS[element.category_normalized] || CATEGORY_COLORS['unknown'];
+  const color = CATEGORY_COLORS[element.category_normalized] || CATEGORY_COLORS['nonmetal'];
 
   return (
     <section className="discover-section">

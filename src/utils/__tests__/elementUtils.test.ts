@@ -122,8 +122,9 @@ describe('formatMass', () => {
 
 describe('CATEGORY_LABELS', () => {
   it('has labels for all 10 categories', () => {
-    expect(Object.keys(CATEGORY_LABELS)).toHaveLength(10);
+    expect(Object.keys(CATEGORY_LABELS)).toHaveLength(11);
     expect(CATEGORY_LABELS['noble-gas']).toBe('Noble Gas');
+    expect(CATEGORY_LABELS['halogen']).toBe('Halogen');
     expect(CATEGORY_LABELS['unknown']).toBe('Unknown');
   });
 });

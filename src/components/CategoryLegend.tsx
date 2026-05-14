@@ -22,6 +22,7 @@ const CATEGORIES = [
   'post-transition-metal',
   'metalloid',
   'nonmetal',
+  'halogen',
   'noble-gas',
   'lanthanide',
   'actinide',

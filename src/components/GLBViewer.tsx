@@ -7,15 +7,26 @@
  * This component is lazy-loaded (`React.lazy`) on the ElementPage to avoid
  * pulling the ~1 MB Three.js bundle into the initial page load.
  *
+ * Animation reliability:
+ * - `frameloop="always"` keeps the render loop ticking so `OrbitControls`
+ *   auto-rotation and the GLB animation clips never freeze after the user
+ *   interacts.
+ * - We drive the `AnimationMixer` ourselves in a `useFrame` and explicitly
+ *   set every action to `LoopRepeat` with infinite repetitions. Some Bohr
+ *   GLBs ship clips with `LoopOnce` which would silently stop after one
+ *   cycle; the previous version relied on whatever loop mode the file
+ *   declared which produced inconsistent behaviour across elements.
+ * - Each viewer instance gets its own mixer (no shared state with cached
+ *   scenes), so re-visiting the same element doesn't inherit a paused mixer.
+ *
  * Performance:
- * - `frameloop="demand"` stops the render loop when the user isn't interacting
- * - Geometry and materials are disposed on unmount to prevent memory leaks
- * - Simple lighting instead of heavy HDR environment maps
+ * - Geometry/material disposal on unmount keeps GPU memory bounded.
+ * - Lighting is kept lightweight (no HDR environment).
  */
-import React, { Suspense, useRef, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF, useAnimations, Stage } from '@react-three/drei';
-import type { Group, Mesh, Material } from 'three';
+import React, { Suspense, useRef, useEffect, useMemo } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls, useGLTF, Stage } from '@react-three/drei';
+import { AnimationMixer, LoopRepeat, type Group, type Mesh, type Material } from 'three';
 
 interface GLBViewerProps {
   /** URL to the .glb model file (can be local or remote). */
@@ -30,16 +41,34 @@ interface GLBViewerProps {
 function Model({ url }: { url: string }) {
   const group = useRef<Group>(null);
   const { scene, animations } = useGLTF(url);
-  const { actions } = useAnimations(animations, group);
 
+  // Own the mixer per-mount so cached scenes can't carry paused state across remounts.
+  const mixer = useMemo(() => new AnimationMixer(scene), [scene]);
+
+  // Configure and start every clip; force infinite looping so a one-shot clip
+  // can't silently stop after the user touches the canvas.
   useEffect(() => {
-    // Play all animation clips embedded in the GLB file
-    Object.values(actions).forEach((action) => {
-      action?.play();
+    const actions = animations.map((clip) => {
+      const action = mixer.clipAction(clip);
+      action.setLoop(LoopRepeat, Infinity);
+      action.clampWhenFinished = false;
+      action.reset().play();
+      return action;
     });
-  }, [actions]);
+    return () => {
+      actions.forEach((action) => action.stop());
+      mixer.stopAllAction();
+      mixer.uncacheRoot(scene);
+    };
+  }, [animations, mixer, scene]);
 
-  // Dispose geometry and materials on unmount to prevent memory leaks
+  // Drive the mixer every frame ourselves — this guarantees the clips keep
+  // advancing whether or not drei's internal subscribers are active.
+  useFrame((_, delta) => {
+    mixer.update(delta);
+  });
+
+  // Dispose geometry and materials when the component unmounts.
   useEffect(() => {
     return () => {
       scene.traverse((child) => {
@@ -67,7 +96,8 @@ const GLBViewer: React.FC<GLBViewerProps> = ({ url }) => {
   return (
     <Canvas
       camera={{ position: [0, 0, 5], fov: 50 }}
-      frameloop="demand"
+      frameloop="always"
+      dpr={[1, 2]}
     >
       <Suspense fallback={null}>
         {/* Stage provides automatic centering, scaling, and studio-quality lighting */}
@@ -75,8 +105,8 @@ const GLBViewer: React.FC<GLBViewerProps> = ({ url }) => {
           <Model url={url} />
         </Stage>
       </Suspense>
-      {/* User can drag to rotate; auto-rotates when idle */}
-      <OrbitControls autoRotate autoRotateSpeed={2} makeDefault />
+      {/* User can drag to rotate; auto-rotates when idle. */}
+      <OrbitControls autoRotate autoRotateSpeed={2} enableDamping makeDefault />
     </Canvas>
   );
 };
