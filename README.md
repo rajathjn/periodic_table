@@ -81,57 +81,6 @@ Starts a local server to preview the production build.
 
 ---
 
-## 📁 Project Structure
-
-```text
-periodic_table/
-├── .github/workflows/     # GitHub Actions CI/CD
-│   └── node.js.yml        # Builds and deploys to gh-pages on push to main
-├── public/                # Static assets (copied as-is to dist/)
-│   ├── assets/elements/   # Downloaded element assets (GLB models, images)
-│   ├── fonts/             # VCR OSD Mono font file
-│   ├── images/elements/   # Element sample photographs
-│   ├── CNAME              # Custom domain config for GitHub Pages
-│   ├── favicon.svg        # Site favicon
-│   └── icons.svg          # SVG icon sprite
-├── scripts/               # Node.js data pipeline scripts
-│   ├── generate-data.cjs       # Fetches & transforms Bowserinator JSON
-│   ├── download-all-assets.cjs # Downloads GLB, Bohr, spectral & sample images
-│   └── enrich-summaries.cjs    # Fetches extended descriptions from Wikipedia
-├── src/
-│   ├── components/        # Reusable React components
-│   │   ├── AtomBackground.tsx   # Decorative floating atom SVGs
-│   │   ├── CategoryLegend.tsx   # Interactive category filter legend
-│   │   ├── DiscoverElement.tsx  # Random element discovery card
-│   │   ├── ElementCell.tsx      # Single element tile in the grid
-│   │   ├── GLBViewer.tsx        # Three.js 3D Bohr model viewer (lazy-loaded)
-│   │   ├── Header.tsx           # Win98-style site header / title bar
-│   │   ├── PeriodicTable.tsx    # Main 18-column periodic table grid
-│   │   └── PropertiesTable.tsx  # Element properties key-value grid
-│   ├── data/
-│   │   └── elements.json       # All 118 elements with properties & asset paths
-│   ├── pages/
-│   │   ├── HomePage.tsx         # Landing page (table + discover card)
-│   │   ├── ElementPage.tsx      # Detailed element view with 3D model
-│   │   └── LicensePage.tsx      # Credits and attribution
-│   ├── types/
-│   │   └── Element.ts           # TypeScript interface for element data
-│   ├── utils/
-│   │   └── elementUtils.ts      # Lookup helpers, formatters, category maps
-│   ├── App.tsx                  # Root component with routing
-│   ├── main.tsx                 # Application entry point
-│   └── index.css                # Global styles (Win98 theme + responsive)
-├── index.html                   # HTML entry point
-├── vite.config.ts               # Vite build configuration
-├── tsconfig.json                # TypeScript project references
-├── tsconfig.app.json            # TypeScript config for app source
-├── tsconfig.node.json           # TypeScript config for Vite/node scripts
-├── eslint.config.js             # ESLint configuration
-└── package.json                 # Dependencies and scripts
-```
-
----
-
 ## 📊 Data Pipeline
 
 The element data is **pre-generated** and committed to the repo. You only need to run these scripts if you want to refresh the data from upstream sources.
