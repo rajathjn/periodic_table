@@ -9,12 +9,14 @@ An interactive, Windows 98-themed periodic table web app built with **React**, *
 ## ✨ Features
 
 - **Interactive Periodic Table** — Click any element to view its full detail page
-- **Category Filtering** — Click legend swatches to highlight element groups (alkali metals, noble gases, etc.)
-- **3D Bohr Models** — Interactive Three.js atom visualizations with orbital animations and auto-rotation
+- **Category Filtering** — Click legend swatches to highlight element groups (alkali metals, halogens, noble gases, etc.)
+- **3D Bohr Models** — Interactive Three.js atom visualizations with orbital animations and reliable auto-rotation
 - **Comprehensive Data** — Atomic mass, density, melting/boiling points, electron configuration, oxidation states, and more
 - **Image Gallery** — Sample photographs, spectral emission images, and 2D Bohr diagrams for each element
 - **Discover Feature** — A randomized "Discover an Element" card on the home page
 - **Retro Aesthetic** — Full Windows 98 UI theme with beveled borders, system fonts, and flat colors
+- **Accessible** — Skip-to-content link, ARIA roles, keyboard navigation, `prefers-reduced-motion` support
+- **Error Resilient** — ErrorBoundary wrappers with Win98-styled recovery dialogs
 - **Responsive Design** — Works on desktop, tablet, and mobile screens
 - **GitHub Pages Deployment** — Automated CI/CD via GitHub Actions
 
@@ -24,12 +26,14 @@ An interactive, Windows 98-themed periodic table web app built with **React**, *
 
 | Layer         | Technology                                                                                                                       |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Framework     | [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)                                                   |
+| Framework     | [React 19](https://react.dev/) + [TypeScript 6](https://www.typescriptlang.org/)                                                 |
 | Build Tool    | [Vite 8](https://vite.dev/)                                                                                                      |
 | 3D Rendering  | [Three.js](https://threejs.org/) + [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) + [Drei](https://github.com/pmndrs/drei) |
 | Routing       | [React Router v7](https://reactrouter.com/)                                                                                      |
 | Styling       | Vanilla CSS with CSS custom properties (Windows 98 theme)                                                                        |
 | Fonts         | [Pixelify Sans](https://fonts.google.com/specimen/Pixelify+Sans), [VT323](https://fonts.google.com/specimen/VT323), VCR OSD Mono |
+| Testing       | [Vitest](https://vitest.dev/) + [Playwright](https://playwright.dev/)                                                            |
+| Quality       | [ESLint 10](https://eslint.org/) + [Prettier](https://prettier.io/) + [lint-staged](https://github.com/lint-staged/lint-staged) + [commitlint](https://commitlint.js.org/) |
 | Hosting       | [GitHub Pages](https://pages.github.com/)                                                                                        |
 
 ---
@@ -78,6 +82,27 @@ npm run preview
 ```
 
 Starts a local server to preview the production build.
+
+---
+
+## 📋 Available Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start Vite dev server with HMR |
+| `npm run build` | TypeCheck + production build |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint (includes jsx-a11y) |
+| `npm run lint:fix` | Auto-fix lint issues |
+| `npm run format` | Format all files with Prettier |
+| `npm run typecheck` | Run TypeScript type checking |
+| `npm test` | Run unit tests (Vitest) |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run test:e2e` | Run Playwright end-to-end tests |
+| `npm run test:e2e:install` | Install Playwright browsers |
+| `npm run analyze` | Generate bundle visualizer report |
+| `npm run size` | Check bundle size budgets |
+| `npm run deploy` | Deploy `dist/` to GitHub Pages |
 
 ---
 
