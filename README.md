@@ -33,7 +33,7 @@ An interactive, Windows 98-themed periodic table web app built with **React**, *
 | Styling       | Vanilla CSS with CSS custom properties (Windows 98 theme)                                                                        |
 | Fonts         | [Pixelify Sans](https://fonts.google.com/specimen/Pixelify+Sans), [VT323](https://fonts.google.com/specimen/VT323), VCR OSD Mono |
 | Testing       | [Vitest](https://vitest.dev/) + [Playwright](https://playwright.dev/)                                                            |
-| Quality       | [ESLint 10](https://eslint.org/) + [Prettier](https://prettier.io/) + [lint-staged](https://github.com/lint-staged/lint-staged) + [commitlint](https://commitlint.js.org/) |
+| Quality       | [ESLint 10](https://eslint.org/) + [Prettier](https://prettier.io/)                                                      |
 | Hosting       | [GitHub Pages](https://pages.github.com/)                                                                                        |
 
 ---
@@ -101,7 +101,6 @@ Starts a local server to preview the production build.
 | `npm run test:e2e` | Run Playwright end-to-end tests |
 | `npm run test:e2e:install` | Install Playwright browsers |
 | `npm run analyze` | Generate bundle visualizer report |
-| `npm run size` | Check bundle size budgets |
 | `npm run deploy` | Deploy `dist/` to GitHub Pages |
 
 ---
